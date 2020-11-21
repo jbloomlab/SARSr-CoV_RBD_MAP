@@ -96,7 +96,7 @@ rule make_summary:
                
             2. [Compute escape fractions]({path(input.compute_barcode_escape)}) for individual barcodes.
             
-            3. [Determine homolog escape fraction](input.homolog_escape) averaged across all barcodes. Generates summary plots including heatmaps.
+            3. [Determine homolog escape fraction]({path(input.homolog_escape)}) averaged across all barcodes. Generates summary plots including heatmaps.
                
             """
             ).strip())
