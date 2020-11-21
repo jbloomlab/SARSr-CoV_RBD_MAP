@@ -62,15 +62,6 @@ The configuration for the analysis is specifed in [config.yaml](config.yaml).
 This file defines key variables for the analysis, and should be relatively self-explanatory.
 You should modify the analysis by changing this configuration file; do **not** hard-code crucial experiment-specific variables within the notebooks or `Snakefile`.
 
-In general:
- - add new samples to [data/barcode_runs.csv](data/barcode_runs.csv)
- - specify new combinations of samples for escape-profile plotting via [data/escape_profiles_config.yaml](data/escape_profiles_config.yaml)
- - specify combinations of samles for multi-dimensional scaling via [data/mds_config.yaml](mds_config.yaml)
- - to output structural mappings, add information to [data/output_pdbs_config.yaml](data/output_pdbs_config.yaml) about which conditions should be mapped to which PDBs, and add information to [data/structural_annotation_config.yaml](data/structural_annotation_config.yaml) about which chains to analyze for defining structural contacts between RBD and antibody or other ligands.
- - to write supplementary data and `dms_view` input data, set the `make_supp_data` flag in [data/escape_profiles_config.yaml](data/escape_profiles_config.yaml) to `true` and `dms_view` input files will be written to [results/supp_data](results/supp_data) for the condition sets with `make_supp_data` as `true` for those conditions with PDB mappings in [data/output_pdbs_config.yaml](data/output_pdbs_config.yaml).
- - to update the GISAID sequence set used to look at natural mutations, update the file pointed to by `gisaid_spikes` in [config.yaml](config.yaml) as described in [data/README.md](data/README.md).
- - to plot information about viral escape selections, add them to [data/escape_selection_results.yaml](data/escape_selection_results.yaml).
-
 ## Cluster configuration
 There is a cluster configuration file [cluster.yaml](cluster.yaml) that configures [Snakefile](Snakefile) for the Fred Hutch cluster.
 The [run_Hutch_cluster.bash](run_Hutch_cluster.bash) script uses this configuration to run [Snakefile](Snakefile).
@@ -117,8 +108,3 @@ Finally, export the pinned version with:
 
     conda env export --prefix ./env > environment.yml
 
-## Creating "subset" repos and uploading data to the SRA
-Currently this repo contains analyses of many antibodies and sera, and should remain public since collaborators do not want all of these data to be public.
-
-For papers, you can make a public "subset" repo by following the instructions in [./subset_data/](subset_data).
-After making a subset repo, you can upload sequencing data to the Sequence Read Archive (SRA) following the instructions in [./SRA_upload/](SRA_upload).

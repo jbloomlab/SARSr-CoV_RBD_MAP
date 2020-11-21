@@ -69,7 +69,7 @@ rule make_summary:
         variant_counts=config['variant_counts'],
         count_variants=nb_markdown('count_variants.ipynb'),
         compute_barcode_escape='results/summary/compute_barcode_escape.md',
-        homolog_escape='results/summary/homolog_escape.md'
+        homolog_escape='results/summary/homolog_escape.md',
     output:
         summary = os.path.join(config['summary_dir'], 'summary.md')
     run:
@@ -96,7 +96,7 @@ rule make_summary:
                
             2. [Compute escape fractions]({path(input.compute_barcode_escape)}) for individual barcodes.
             
-            3. [Determine homolog escape fraction](input.homolog_escape) averaged across all barcodes. Generates summary plots including heatmaps.
+            3. [Determine homolog escape fraction]({path(input.homolog_escape)}) averaged across all barcodes. Generates summary plots including heatmaps.
                
             """
             ).strip())
