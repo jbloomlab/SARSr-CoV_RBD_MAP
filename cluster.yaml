@@ -1,0 +1,25 @@
+# cluster configuration for running Snakefile on Hutch cluster
+
+__default__:
+  cpus: 1
+  time: 0-4
+  mem: 32000
+  name: "{rule}"
+  constraint: '"gizmof|gizmog|gizmoh|gizmoj|gizmok"'
+
+count_variants:
+  cpus: 8
+  time: 0-2
+  mem: 50000
+
+compute_barcode_escape:
+  cpus: 16
+  time: 0-2
+  mem: 100000
+  constraint: gizmok
+
+homolog_escape:
+  cpus: 4
+  time: 0-1
+  mem: 20000
+  constraint: gizmok
