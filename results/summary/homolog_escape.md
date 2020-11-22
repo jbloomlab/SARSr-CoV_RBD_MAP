@@ -176,15 +176,15 @@ barcodes across all homolog escape fracs is 257.
 
 How does escape frac for a homolog tend to correlate with its
 expression? Not that this was a particularly well-devised check, but for
-most homologs (especially expression around or above 9), doesn’t seem to
-be an overall association between expression and escape. Perhaps notable
-that the only measurement that really hits the “intermediate” range of
-escape frac (instead of being more binary 0/1) is the more poorly
-expressing variant AncClade2\_alt1\_subs\_only (that is, a variant that
-we do expect to be perhaps less stable because of epistatic
-incompatibilites – this variant contains all of the 48 substitutions
-that occur between AncAsia and AncClade2, but does not contain the two
-deletions that also occur along this branch).
+most homologs (especially expression around 10), doesn’t seem to be an
+overall association between expression and escape. Perhaps notable that
+the only measurement that really hits the “intermediate” range of escape
+frac (instead of being more binary 0/1) is the more poorly expressing
+variant AncClade2\_alt1\_subs\_only (that is, a variant that we do
+expect to be perhaps less stable because of epistatic incompatibilites –
+this variant contains all of the 48 substitutions that occur between
+AncAsia and AncClade2, but does not contain the two deletions that also
+occur along this branch).
 
 If this variant were being disproportionately selected *out* by the RBD+
 gating during the sort (because it is lower expressing than the average
@@ -192,7 +192,7 @@ homolog), this would have the effect of dragging down its theoretical
 maximum escape fraction, because its theoretical maximum antibody-escape
 bin counts cannot reach the relative frequency of its pre-sort counts,
 because some fraction of the cells containing those barcodes aren’t even
-making it through the RBD+ gate.
+making it through the RBD+ gate and then into the antibody-escape bin.
 
 Consistent with this premise, it is even more notable that the four
 antibody escape samples for this genotype that *do* have these
@@ -204,13 +204,19 @@ with differently drawn sort gates). The FACS log from the 11/9 2-2 does
 indeed show that the RBD+ gating was drawn more stringently than in the
 other two batches. So, taken together, I do believe quite strongly that
 these intermediate escape fractions are not distinguishable from escape
-fractions of 1. And therefore, even though from the FACS log, there
-*were* instances where we could see clouds of cells representing
-different homologs with differing levels of escape (which we were hoping
-we could maybe suss out as variation in escape fraction quantities
-e.g. between 0.8 and 1), I do not think we can effectively distinguish
-those genotypes when conflated by variance in expression and inherent
-variance in stringency of RBD+ gating across sort batches.
+fractions of 1. And therefore, I wonder across all of the homologs
+whether we should even display binding as a quantitative 0 to 1 scale,
+versus just binary yes/no? Even though from the FACS log, there *were*
+instances where we could see clouds of cells representing different
+homologs with differing levels of escape (which we were hoping we could
+then maybe see in the phenotypes some small and meaningful differences
+from 0 or 1), I do not think we can effectively distinguish those
+genotypes when conflated by variance in expression and inherent variance
+in stringency of RBD+ gating across sort batches. Even though in this
+scatterplot, we can for the maximally expressing homologs see some
+variation in the escape scores away from ==0 or ==1 that might be
+interpretable in the end, I don’t see a super principled way of how to
+de-conflate varying expression effects here.
 
     plot(dt_collapse$expression,dt_collapse$escape_frac,pch=16,col="#00000066",xlab="homolog expression",ylab="homolog escape fraction")
 
