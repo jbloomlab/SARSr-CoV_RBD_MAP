@@ -98,12 +98,15 @@ dt <- dt[pre_count>0 & !is.na(expression),]
 ## Filtering
 
 We will use the per-barcode pre\_count and expression scores to filter
-out escape scores used in computing per-homolog escape. First, let’s
-look at the distribution of pre-counts across barcodes. Vertical lines
-indicate the 10th percentile of pre-count where we will filter.
+out escape scores used in computing per-homolog escape.
+
+First, let’s look at the distribution of pre-counts across barcodes. The
+median pre-count is 203. Vertical lines on the two plots below indicate
+a threshold for pre\_count of 1/2 that of the median pre-count, which is
+what we’ll apply below.
 
 ``` r
-hist(log10(dt$pre_count),col="gray50",main="",xlab="pre-selection sequencing count (log10 scale)");abline(v=log10(quantile(dt$pre_count,0.1)),col="red",lty=2)
+hist(log10(dt$pre_count),col="gray50",main="",xlab="pre-selection sequencing count (log10 scale)");abline(v=log10(0.5*median(dt$pre_count)),col="red",lty=2)
 ```
 
 <img src="homolog_escape_files/figure-gfm/hist_pre_count-1.png" style="display: block; margin: auto;" />
@@ -114,25 +117,26 @@ does, particularly when pre\_count is lower.
 ``` r
 plot(dt$pre_count,dt$escape_frac,pch=16,col="#00000060",log="x",xlab="pre-count (log scale)",ylab="escape fraction (shouldn't exceed 1)")
 abline(h=1,lty=2,col="red")
-abline(v=quantile(dt$pre_count,0.1),lty=2,col="red")
+abline(v=0.5*median(dt$pre_count),lty=2,col="red")
 ```
 
 <img src="homolog_escape_files/figure-gfm/scatter_pre_count-1.png" style="display: block; margin: auto;" />
 
-Remove barcode measurements for those with pre-counts in the lowest ten
-percentile. This corresponds to removing variants with less than 72
-pre-sort counts.
+Remove barcode measurements for those where pre-count is less than half
+the median pre-count. This corresponds to removing variants with less
+than 101.5 pre-sort counts.
 
 ``` r
-dt <- dt[pre_count > quantile(dt$pre_count,0.1),]
+dt <- dt[pre_count > 0.5*median(dt$pre_count),]
 ```
 
 Censor NA measurements for AncSARS1a\_alt and HKU3-8 which were
-generally non-expressing (and so any barcodes that eke through are
-probably poorly expressed/artefactual)
+generally non-expressing from our prior measurements (and so any
+barcodes that eke through are probably poorly expressed/artefactual)
 
 ``` r
 dt[target%in%c("AncSARS1a_alt","HKU3-8"),escape_frac:=NA]
+dt[target%in%c("AncSARS1a_alt","HKU3-8"),expression:=NA]
 ```
 
 ## Escape fraction per homolog
@@ -150,20 +154,20 @@ ggplot(dt,aes(x=target,y=escape_frac))+
   facet_wrap(~antibody,ncol=1)
 ```
 
-    ## Warning: Removed 33 rows containing non-finite values (stat_ydensity).
+    ## Warning: Removed 27 rows containing non-finite values (stat_ydensity).
 
-    ## Warning: Removed 33 rows containing non-finite values (stat_summary).
+    ## Warning: Removed 27 rows containing non-finite values (stat_summary).
 
 <img src="homolog_escape_files/figure-gfm/escape_frac_vioplot-1.png" style="display: block; margin: auto;" />
 
 Collapse each homolog escape fraction to its median across barcodes.
 
 ``` r
-dt[,median_escape_frac:=median(escape_frac,na.rm=T),by=c("library","target","antibody")]
-dt[,n_barcodes:=sum(!is.na(escape_frac)),by=c("library","target","antibody")]
-dt[,median_expression:=median(expression,na.rm=T),by=c("library","target")]
-dt_collapse <- unique(dt[,.(library,target,median_expression,antibody,median_escape_frac,n_barcodes)])
-dt_collapse[,expression:=median_expression];dt_collapse[,escape_frac:=median_escape_frac]
+dt[,median_escape_frac:=median(escape_frac,na.rm=T),by=c("library","target","antibody")] #median escape across all barcodes for a homolog
+dt[,n_barcodes:=sum(!is.na(escape_frac)),by=c("library","target","antibody")] #the number of barcodes on which a homolog median escape was calculated
+dt[,median_expression:=median(expression,na.rm=T),by=c("library","target")] #the average expression of that homolog
+dt_collapse <- unique(dt[,.(library,target,median_expression,antibody,median_escape_frac,n_barcodes)]) #collapse down to homolog-level data instead of barcode-level
+dt_collapse[,expression:=median_expression];dt_collapse[,escape_frac:=median_escape_frac] #rename median quantities to just now be the homolog-level quantity
 dt_collapse <- dt_collapse[,.(library,target,expression,antibody,escape_frac,n_barcodes)]
 dt_collapse[is.na(escape_frac),n_barcodes:=NA]
 ```
@@ -183,13 +187,76 @@ dt_collapse[escape_frac>1,escape_frac:=1]
 
 Also make histograms showing the typical number of barcodes on which a
 homolog escape fraction was averaged across. The median number of
-barcodes across all homolog escape fracs is 286.
+barcodes across all homolog escape fracs is 257.
 
 ``` r
 hist(dt_collapse$n_barcodes,main="",col="gray50",xlab="number of barcodes",breaks=20)
 ```
 
 <img src="homolog_escape_files/figure-gfm/hist_n_barcode-1.png" style="display: block; margin: auto;" />
+
+How does escape frac for a homolog tend to correlate with its
+expression? Not that this was a particularly well-devised check, but for
+most homologs (especially expression around 10), doesn’t seem to be an
+overall association between expression and escape. Perhaps notable that
+the only measurement that really hits the “intermediate” range of escape
+frac (instead of being more binary 0/1) is the more poorly expressing
+variant AncClade2\_alt1\_subs\_only (that is, a variant that we do
+expect to be perhaps less stable because of epistatic incompatibilites –
+this variant contains all of the 48 substitutions that occur between
+AncAsia and AncClade2, but does not contain the two deletions that also
+occur along this branch).
+
+If this variant were being disproportionately selected *out* by the RBD+
+gating during the sort (because it is lower expressing than the average
+homolog), this would have the effect of dragging down its theoretical
+maximum escape fraction, because its theoretical maximum antibody-escape
+bin counts cannot reach the relative frequency of its pre-sort counts,
+because some fraction of the cells containing those barcodes aren’t even
+making it through the RBD+ gate and then into the antibody-escape bin.
+
+Consistent with this premise, it is even more notable that the four
+antibody escape samples for this genotype that *do* have these
+intermediate escape fractions (\~0.5) are the four antibodies that were
+run together on the Aria 2-2 on the 11/9/2020 sort day – the five
+antibodies run on 11/6, and the one antibody (S2X227) that were run on
+the Aria 2-3 on 11/9 (so even prepped in parallel, but different sorter
+with differently drawn sort gates). The FACS log from the 11/9 2-2 does
+indeed show that the RBD+ gating was drawn more stringently than in the
+other two batches. So, taken together, I do believe quite strongly that
+these intermediate escape fractions are not distinguishable from escape
+fractions of 1. And therefore, I wonder across all of the homologs
+whether we should even display binding as a quantitative 0 to 1 scale,
+versus just binary yes/no? Even though from the FACS log, there *were*
+instances where we could see clouds of cells representing different
+homologs with differing levels of escape (which we were hoping we could
+then maybe see in the phenotypes some small and meaningful differences
+from 0 or 1), I do not think we can effectively distinguish those
+genotypes when conflated by variance in expression and inherent variance
+in stringency of RBD+ gating across sort batches. Even though in this
+scatterplot, we can for the maximally expressing homologs see some
+variation in the escape scores away from ==0 or ==1 that might be
+interpretable in the end, I don’t see a super principled way of how to
+de-conflate varying expression effects here.
+
+``` r
+plot(dt_collapse$expression,dt_collapse$escape_frac,pch=16,col="#00000066",xlab="homolog expression",ylab="homolog escape fraction")
+```
+
+<img src="homolog_escape_files/figure-gfm/scatter_escape_v_expression-1.png" style="display: block; margin: auto;" />
+
+Let’s also collapse to a binary 0/1 escape score indicator, in light of
+the observation above. I think if we only use the actual sampled
+homologs and don’t use the inferred ancestors (which includes this
+expression=8 variant), we probably can keep the 0 to 1 continuous scale
+as these all have good expression, although I’m not sure in the end if
+there is valuable information in the fine-grained differences in binding
+score or not.
+
+``` r
+dt_collapse[escape_frac<0.2,binary_escape_frac:=0]
+dt_collapse[escape_frac>=0.2,binary_escape_frac:=1]
+```
 
 ## Heatmaps
 
@@ -271,6 +338,79 @@ ggplot(temp,aes(target,antibody))+geom_tile(aes(fill=escape_frac),color="black",
 
 ``` r
 invisible(dev.print(pdf, paste(config$escape_scores_dir,"/heatmap_homologs_all-ancestors.pdf",sep="")))
+```
+
+Same heatmaps, but with the binary 0/1 escape scores
+
+``` r
+#set antibody order as factor from config
+ggplot(dt_collapse,aes(target,antibody))+geom_tile(aes(fill=binary_escape_frac),color="black",lwd=0.1)+
+  scale_fill_gradient(low="white",high="#353D41",limits=c(0,1),na.value="cyan")+
+  labs(x="RBD homolog",y="")+theme_classic(base_size=9)+
+  coord_equal()+theme(axis.text.x=element_text(angle=90,hjust=1,face="bold"))
+```
+
+<img src="homolog_escape_files/figure-gfm/binary_heatmap_homolog-escape_all-1.png" style="display: block; margin: auto;" />
+
+``` r
+invisible(dev.print(pdf, paste(config$escape_scores_dir,"/binary_heatmap_homologs_all.pdf",sep="")))
+```
+
+Extant homologs.
+
+``` r
+extant <- c(config$EurAf_extant,config$SARS2_extant,config$SARS1_extant,config$Clade2_extant)
+
+temp <- dt_collapse[target %in% extant,];temp$target <- factor(temp$target,levels=extant)
+
+ggplot(temp,aes(target,antibody))+geom_tile(aes(fill=binary_escape_frac),color="black",lwd=0.1)+
+  scale_fill_gradient(low="white",high="#353D41",limits=c(0,1),na.value="cyan")+
+  labs(x="RBD homolog",y="")+theme_classic(base_size=9)+
+  coord_equal()+theme(axis.text.x=element_text(angle=90,hjust=1,face="bold"))
+```
+
+<img src="homolog_escape_files/figure-gfm/binary_heatmap_homolog-escape_extant-1.png" style="display: block; margin: auto;" />
+
+``` r
+invisible(dev.print(pdf, paste(config$escape_scores_dir,"/binary_heatmap_homologs_extant.pdf",sep="")))
+```
+
+MAP ancestors.
+
+``` r
+ancestors <- c(config$ancestors_MAP)
+
+temp <- dt_collapse[target %in% ancestors,];temp$target <- factor(temp$target,levels=ancestors)
+
+ggplot(temp,aes(target,antibody))+geom_tile(aes(fill=binary_escape_frac),color="black",lwd=0.1)+
+  scale_fill_gradient(low="white",high="#353D41",limits=c(0,1),na.value="cyan")+
+  labs(x="RBD homolog",y="")+theme_classic(base_size=9)+
+  coord_equal()+theme(axis.text.x=element_text(angle=90,hjust=1,face="bold"))
+```
+
+<img src="homolog_escape_files/figure-gfm/binary_heatmap_homolog-escape_MAP-anc-1.png" style="display: block; margin: auto;" />
+
+``` r
+invisible(dev.print(pdf, paste(config$escape_scores_dir,"/binary_heatmap_homologs_MAP-ancestors.pdf",sep="")))
+```
+
+MAP plus alternative ancestors.
+
+``` r
+ancestors <- c(config$ancestors_MAP_v_alt)
+
+temp <- dt_collapse[target %in% ancestors,];temp$target <- factor(temp$target,levels=ancestors)
+
+ggplot(temp,aes(target,antibody))+geom_tile(aes(fill=binary_escape_frac),color="black",lwd=0.1)+
+  scale_fill_gradient(low="white",high="#353D41",limits=c(0,1),na.value="cyan")+
+  labs(x="RBD homolog",y="")+theme_classic(base_size=9)+
+  coord_equal()+theme(axis.text.x=element_text(angle=90,hjust=1,face="bold"))
+```
+
+<img src="homolog_escape_files/figure-gfm/binary_heatmap_homolog-escape_all-anc-1.png" style="display: block; margin: auto;" />
+
+``` r
+invisible(dev.print(pdf, paste(config$escape_scores_dir,"/binary_heatmap_homologs_all-ancestors.pdf",sep="")))
 ```
 
 ## Output
