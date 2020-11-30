@@ -13,9 +13,9 @@ count_variants:
   mem: 50000
 
 compute_barcode_escape:
-  cpus: 16
+  cpus: 8
   time: 0-2
-  mem: 100000
+  mem: 50000
   constraint: gizmok
 
 homolog_escape:
