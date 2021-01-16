@@ -370,6 +370,104 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>1307137.0</td>
       <td>[/shared/ngs/illumina/tstarr/201123_D00300_1119_BHJKJTBCX3/Unaligned/Project_tstarr/expt78_homolog_Abneg_S152_R1_001.fastq.gz, /shared/ngs/illumina/tstarr/201116_D00300_1113_BHJKKFBCX3/Unaligned/Project_tstarr/expt78_homolog_Abneg_S56_R1_001.fastq.gz]</td>
     </tr>
+    <tr>
+      <td>211113</td>
+      <td>expt_79-81</td>
+      <td>lib1</td>
+      <td>none</td>
+      <td>0</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>reference</td>
+      <td>expt_79-81-none-0-reference</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>[/shared/ngs/illumina/tstarr/210115_D00300_1154_BHK3HCBCX3/Unaligned/Project_tstarr/expt_79-81_hom_ref_S85_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>211113</td>
+      <td>expt_79</td>
+      <td>lib1</td>
+      <td>S2H97</td>
+      <td>58</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_79-S2H97-58-escape</td>
+      <td>0.056</td>
+      <td>107488.0</td>
+      <td>[/shared/ngs/illumina/tstarr/210115_D00300_1154_BHK3HCBCX3/Unaligned/Project_tstarr/expt79_hom_Abneg_S88_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>211113</td>
+      <td>expt_79strin</td>
+      <td>lib1</td>
+      <td>S2H97_stringent</td>
+      <td>58</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_79strin-S2H97_stringent-58-escape</td>
+      <td>0.007</td>
+      <td>9624.0</td>
+      <td>[/shared/ngs/illumina/tstarr/210115_D00300_1154_BHK3HCBCX3/Unaligned/Project_tstarr/expt79_hom_string_S89_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>211113</td>
+      <td>expt_80</td>
+      <td>lib1</td>
+      <td>S2H13</td>
+      <td>56</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_80-S2H13-56-escape</td>
+      <td>0.878</td>
+      <td>1364359.0</td>
+      <td>[/shared/ngs/illumina/tstarr/210115_D00300_1154_BHK3HCBCX3/Unaligned/Project_tstarr/expt80_hom_Abneg_S92_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>211113</td>
+      <td>expt_80strin</td>
+      <td>lib1</td>
+      <td>S2H13_stringent</td>
+      <td>56</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_80strin-S2H13_stringent-56-escape</td>
+      <td>0.843</td>
+      <td>721340.0</td>
+      <td>[/shared/ngs/illumina/tstarr/210115_D00300_1154_BHK3HCBCX3/Unaligned/Project_tstarr/expt80_hom_string_S93_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>211113</td>
+      <td>expt_81</td>
+      <td>lib1</td>
+      <td>S2H14</td>
+      <td>105</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_81-S2H14-105-escape</td>
+      <td>0.986</td>
+      <td>1874644.0</td>
+      <td>[/shared/ngs/illumina/tstarr/210115_D00300_1154_BHK3HCBCX3/Unaligned/Project_tstarr/expt81_hom_Abneg_S96_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>211113</td>
+      <td>expt_81strin</td>
+      <td>lib1</td>
+      <td>S2H14_stringent</td>
+      <td>105</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_81strin-S2H14_stringent-105-escape</td>
+      <td>0.955</td>
+      <td>959111.0</td>
+      <td>[/shared/ngs/illumina/tstarr/210115_D00300_1154_BHK3HCBCX3/Unaligned/Project_tstarr/expt81_hom_string_S97_R1_001.fastq.gz]</td>
+    </tr>
   </tbody>
 </table>
 
@@ -486,12 +584,12 @@ display(HTML(
   </thead>
   <tbody>
     <tr>
-      <td>lib1</td>
-      <td>25896</td>
-    </tr>
-    <tr>
       <td>lib2</td>
       <td>23259</td>
+    </tr>
+    <tr>
+      <td>lib1</td>
+      <td>25896</td>
     </tr>
   </tbody>
 </table>
@@ -702,7 +800,7 @@ display(HTML(fates
   </thead>
   <tbody>
     <tr>
-      <th rowspan="13" valign="top">lib1</th>
+      <th rowspan="20" valign="top">lib1</th>
       <th>expt_68-73-none-0-reference</th>
       <td>213176</td>
       <td>2455034</td>
@@ -806,6 +904,62 @@ display(HTML(fates
       <td>57331</td>
       <td>2839240</td>
     </tr>
+    <tr>
+      <th>expt_79-81-none-0-reference</th>
+      <td>444944</td>
+      <td>3239545</td>
+      <td>546890</td>
+      <td>209112</td>
+      <td>8373676</td>
+    </tr>
+    <tr>
+      <th>expt_79-S2H97-58-escape</th>
+      <td>12319</td>
+      <td>104863</td>
+      <td>14768</td>
+      <td>7395</td>
+      <td>212145</td>
+    </tr>
+    <tr>
+      <th>expt_79strin-S2H97_stringent-58-escape</th>
+      <td>1848</td>
+      <td>13069</td>
+      <td>1197</td>
+      <td>4526</td>
+      <td>12221</td>
+    </tr>
+    <tr>
+      <th>expt_80-S2H13-56-escape</th>
+      <td>152085</td>
+      <td>867629</td>
+      <td>183161</td>
+      <td>63659</td>
+      <td>2917946</td>
+    </tr>
+    <tr>
+      <th>expt_80strin-S2H13_stringent-56-escape</th>
+      <td>75709</td>
+      <td>470358</td>
+      <td>91825</td>
+      <td>33636</td>
+      <td>1572057</td>
+    </tr>
+    <tr>
+      <th>expt_81-S2H14-105-escape</th>
+      <td>221026</td>
+      <td>1277460</td>
+      <td>254846</td>
+      <td>100212</td>
+      <td>4377215</td>
+    </tr>
+    <tr>
+      <th>expt_81strin-S2H14_stringent-105-escape</th>
+      <td>115497</td>
+      <td>683625</td>
+      <td>136974</td>
+      <td>48677</td>
+      <td>2308460</td>
+    </tr>
   </tbody>
 </table>
 
@@ -844,7 +998,9 @@ _ = barcode_fate_plot.draw()
 ```
 
 
+    
 ![png](count_variants_files/count_variants_40_0.png)
+    
 
 
 ## Output csv of barcode counts
