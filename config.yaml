@@ -225,16 +225,21 @@ antibodies_ordered:
   - S2X35
   - S2X259
   - S304
+  - S2H97
+  - S2H97_stringent
   - S2E12
   - S2H58
   - S2X16
   - S2D106
   - S2X58
-  - S2M11
+  - S2H13
+  - S2H13_stringent
+  - S2H14
+  - S2H14_stringent
   - S2X227
 
 # Input files for analyses from the data subdirectory
-sarbecovirus_alignment: data/RBDs_aa_aligned.fasta
+sarbecovirus_alignment: data/RBD_aa_aligned.fasta
 
 
 # output directories / files
@@ -246,4 +251,7 @@ variant_counts: results/counts/variant_counts.csv
 escape_scores_dir: results/escape_scores
 escape_fracs_barcodes: results/escape_scores/escape_scores_homolog_barcodes.csv
 escape_fracs_homologs: results/escape_scores/escape_scores_homologs.csv
+escape_muts: data/mutant_escape.csv
+compare_mut_dir: results/compare_mut
+
 
