@@ -222,18 +222,17 @@ ancestors_MAP_v_alt:
 #antibodies in desired order for plotting
 antibodies_ordered:
   - S309
-  - S2X35
-  - S2X259
-  - S304
   - S2H97
   - S2H97_stringent
+  - S304
+  - S2X35
   - S2E12
-  - S2H58
   - S2X16
-  - S2D106
-  - S2X58
+  - S2H58
   - S2H13
   - S2H13_stringent
+  - S2D106
+  - S2X58
   - S2H14
   - S2H14_stringent
   - S2X227

@@ -44,7 +44,7 @@ sessionInfo()
 
     ## R version 3.6.2 (2019-12-12)
     ## Platform: x86_64-pc-linux-gnu (64-bit)
-    ## Running under: Ubuntu 18.04.5 LTS
+    ## Running under: Ubuntu 18.04.4 LTS
     ## 
     ## Matrix products: default
     ## BLAS/LAPACK: /app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib/libopenblas_haswellp-r0.3.7.so
@@ -101,7 +101,7 @@ We will use the per-barcode pre\_count and expression scores to filter
 out escape scores used in computing per-homolog escape.
 
 First, let’s look at the distribution of pre-counts across barcodes. The
-median pre-count is 285. Vertical lines on the two plots below indicate
+median pre-count is 286. Vertical lines on the two plots below indicate
 a threshold for pre\_count of 1/2 that of the median pre-count, which is
 what we’ll apply below.
 
@@ -124,7 +124,7 @@ abline(v=0.5*median(dt$pre_count),lty=2,col="red")
 
 Remove barcode measurements for those where pre-count is less than half
 the median pre-count. This corresponds to removing variants with less
-than 142.5 pre-sort counts.
+than 143 pre-sort counts.
 
 ``` r
 dt <- dt[pre_count > 0.5*median(dt$pre_count),]
@@ -154,9 +154,9 @@ ggplot(dt,aes(x=target,y=escape_frac))+
   facet_wrap(~antibody,ncol=1)
 ```
 
-    ## Warning: Removed 39 rows containing non-finite values (stat_ydensity).
+    ## Warning: Removed 34 rows containing non-finite values (stat_ydensity).
 
-    ## Warning: Removed 39 rows containing non-finite values (stat_summary).
+    ## Warning: Removed 34 rows containing non-finite values (stat_summary).
 
 <img src="homolog_escape_files/figure-gfm/escape_frac_vioplot-1.png" style="display: block; margin: auto;" />
 
@@ -187,7 +187,7 @@ dt_collapse[escape_frac>1,escape_frac:=1]
 
 Also make histograms showing the typical number of barcodes on which a
 homolog escape fraction was averaged across. The median number of
-barcodes across all homolog escape fracs is 260.
+barcodes across all homolog escape fracs is 261.
 
 ``` r
 hist(dt_collapse$n_barcodes,main="",col="gray50",xlab="number of barcodes",breaks=20)

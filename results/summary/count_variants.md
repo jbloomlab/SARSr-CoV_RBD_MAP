@@ -246,20 +246,6 @@ display(HTML(barcode_runs.to_html(index=False)))
     </tr>
     <tr>
       <td>201106</td>
-      <td>expt_71</td>
-      <td>lib1</td>
-      <td>S2X259</td>
-      <td>59</td>
-      <td>ng_per_mL</td>
-      <td>Vir</td>
-      <td>escape</td>
-      <td>expt_71-S2X259-59-escape</td>
-      <td>0.421</td>
-      <td>805434.0</td>
-      <td>[/shared/ngs/illumina/tstarr/201123_D00300_1119_BHJKJTBCX3/Unaligned/Project_tstarr/expt69_lib1_Abneg_S123_R1_001.fastq.gz, /shared/ngs/illumina/tstarr/201116_D00300_1113_BHJKKFBCX3/Unaligned/Project_tstarr/expt69_lib1_Abneg_S27_R1_001.fastq.gz]</td>
-    </tr>
-    <tr>
-      <td>201106</td>
       <td>expt_72</td>
       <td>lib1</td>
       <td>S2X58</td>
@@ -327,20 +313,6 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>0.890</td>
       <td>1494533.0</td>
       <td>[/shared/ngs/illumina/tstarr/201123_D00300_1119_BHJKJTBCX3/Unaligned/Project_tstarr/expt75_homolog_Abneg_S143_R1_001.fastq.gz, /shared/ngs/illumina/tstarr/201116_D00300_1113_BHJKKFBCX3/Unaligned/Project_tstarr/expt75_homolog_Abneg_S47_R1_001.fastq.gz]</td>
-    </tr>
-    <tr>
-      <td>201109</td>
-      <td>expt_76</td>
-      <td>lib1</td>
-      <td>S2M11</td>
-      <td>19</td>
-      <td>ng_per_mL</td>
-      <td>Vir</td>
-      <td>escape</td>
-      <td>expt_76-S2M11-19-escape</td>
-      <td>0.948</td>
-      <td>1214859.0</td>
-      <td>[/shared/ngs/illumina/tstarr/201123_D00300_1119_BHJKJTBCX3/Unaligned/Project_tstarr/expt76_homolog_Abneg_S146_R1_001.fastq.gz, /shared/ngs/illumina/tstarr/201116_D00300_1113_BHJKKFBCX3/Unaligned/Project_tstarr/expt76_homolog_Abneg_S50_R1_001.fastq.gz]</td>
     </tr>
     <tr>
       <td>201109</td>
@@ -800,7 +772,7 @@ display(HTML(fates
   </thead>
   <tbody>
     <tr>
-      <th rowspan="20" valign="top">lib1</th>
+      <th rowspan="18" valign="top">lib1</th>
       <th>expt_68-73-none-0-reference</th>
       <td>213176</td>
       <td>2455034</td>
@@ -831,14 +803,6 @@ display(HTML(fates
       <td>105003</td>
       <td>25151</td>
       <td>1459938</td>
-    </tr>
-    <tr>
-      <th>expt_71-S2X259-59-escape</th>
-      <td>51926</td>
-      <td>505386</td>
-      <td>120975</td>
-      <td>27948</td>
-      <td>1715892</td>
     </tr>
     <tr>
       <th>expt_72-S2X58-18-escape</th>
@@ -879,14 +843,6 @@ display(HTML(fates
       <td>220951</td>
       <td>52851</td>
       <td>3166600</td>
-    </tr>
-    <tr>
-      <th>expt_76-S2M11-19-escape</th>
-      <td>96579</td>
-      <td>912446</td>
-      <td>219528</td>
-      <td>51390</td>
-      <td>3114361</td>
     </tr>
     <tr>
       <th>expt_77-S2X16-54-escape</th>
