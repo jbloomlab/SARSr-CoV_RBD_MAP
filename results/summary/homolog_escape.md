@@ -44,7 +44,7 @@ sessionInfo()
 
     ## R version 3.6.2 (2019-12-12)
     ## Platform: x86_64-pc-linux-gnu (64-bit)
-    ## Running under: Ubuntu 18.04.4 LTS
+    ## Running under: Ubuntu 18.04.5 LTS
     ## 
     ## Matrix products: default
     ## BLAS/LAPACK: /app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib/libopenblas_haswellp-r0.3.7.so
@@ -269,7 +269,7 @@ default ordering of homologs set by the factor variable.
 
 ``` r
 #set antibody order as factor from config
-dt_collapse$antibody <- factor(dt_collapse$antibody,levels=config$antibodies_ordered)
+dt_collapse$antibody <- factor(dt_collapse$antibody,levels=rev(config$antibodies_ordered))
 
 ggplot(dt_collapse,aes(target,antibody))+geom_tile(aes(fill=escape_frac),color="black",lwd=0.1)+
   scale_fill_gradient(low="white",high="#353D41",limits=c(0,1),na.value="cyan")+
