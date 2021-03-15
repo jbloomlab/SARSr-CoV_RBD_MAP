@@ -2,10 +2,9 @@
 
 Before publishing your study, you need to make the raw data available.
 Here is how to upload FASTQ files to the NCBI [Sequence Read Archive](https://www.ncbi.nlm.nih.gov/sra).
-The files are uploaded to the existing BioProject [PRJNA639956](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA639956), which is set up to store all deep mutational scanning and mutational antigenic profiling experiments that use the SARS-CoV-2 RBD yeast-display mutant libraries described in [Starr et al (2020)](https://dx.doi.org/10.1016%2Fj.cell.2020.08.012).
+The files are uploaded to a newly created BioProject [PRJNA714677](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA714677), which is set up to store all deep mutational scanning and mutational antigenic profiling experiments that use the v1 homologs libraries described in forthcoming publications.
 
-These instructions are only for uploading new Illumina barcode sequencing for the mutant library described in [Starr et al (2020)](https://dx.doi.org/10.1016%2Fj.cell.2020.08.012), as for new deep mutational scanning or mutational antigenic profiling experiments.
-If you are starting a new BioProject (e.g., different RBD mutant library), do **not** follow these instructions but instead create an entirely new BioProject and samples in that.
+These instructions are only for uploading Illumina barcode sequencing for the antibody-binding experiments conducted here.
 
 For each new deep mutational scanning or mutational antigenic profiling study with these libraries, you can upload the FASTQ files as a new *BioSample*.
 Here are the steps:
@@ -40,7 +39,7 @@ Also provide the rest of the information:
 
 Then hit `Continue`.
 You will now be on the page to specify the BioProject.
-We are adding to an existing BioProject, so enter [PRJNA639956](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA639956) as the *Existing BioProject* and hit `Continue`.
+We are adding to an existing BioProject, so enter [PRJNA714677](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA714677) as the *Existing BioProject* and hit `Continue`.
 Finally, add a sample title, such as "Illumina barcode sequencing from mutational antigenic profiling of Crowe lab antibodies using yeast-displayed SARS-CoV-2 RBD."
 Then hit `Continue`, make sure everything looks correct, then hit `Submit`.
 
@@ -54,7 +53,7 @@ This time, under the `Start a new submission` banner, click *Sequence Read Archi
 You are now on a page with a `New submission` button, which you should click.
 Check that the submitter information is correct, then click `Continue`.
 You will now be at the *General Information* page.
-We are adding to an existing BioProject, so enter [PRJNA639956](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA639956) as the *Existing BioProject*.
+We are adding to an existing BioProject, so enter [PRJNA714677](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA714677) as the *Existing BioProject*.
 Then for the question of whether you already registered a *BioSample*, also select yes.
 Then select a *Release Date* depending on whether you want to release the results immediately (usually fine) or at some future date.
 Then click `Continue`.
@@ -118,6 +117,6 @@ You then probably want to delete the `SRA_submission.tar` file as it is very lar
 
 ## Note for after the paper is published
 After a paper is published, you should update the metadata description to link to the publication.
-To do this, login to the [SRA Submission Portal](https://submit.ncbi.nlm.nih.gov/subs/sra/) and click the `Manage data` button for BioProject [PRJNA639956](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA639956) and there will be options where you can add *Publications* as well as update the project's free-form description text if needed.
+To do this, login to the [SRA Submission Portal](https://submit.ncbi.nlm.nih.gov/subs/sra/) and click the `Manage data` button for BioProject [PRJNA714677](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA714677) and there will be options where you can add *Publications* as well as update the project's free-form description text if needed.
 Also be sure that any relevant NIH grants are added.
 
