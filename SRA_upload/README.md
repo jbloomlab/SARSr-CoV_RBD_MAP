@@ -22,7 +22,7 @@ You will now be at the *Sample Type* page, and you have to select the package th
 Click *Microbe*--although we are studying a pathogen it's not a direct clinical sample but an experiment using yeast on a pathogen, which is why we choose this sample type.
 Then click `Continue`.
 Now you enter the sample attributes.
-For the sample name, provide a short name that describes the sample, such as `Crowe_antibody_barcodes`.
+For the sample name, provide a short name that describes the sample, such as `Vir_antibody_breadth_barcodes`.
 Also provide the rest of the information:
 
   - Organism: Severe acute respiratory syndrome coronavirus 2
@@ -40,10 +40,10 @@ Also provide the rest of the information:
 Then hit `Continue`.
 You will now be on the page to specify the BioProject.
 We are adding to an existing BioProject, so enter [PRJNA714677](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA714677) as the *Existing BioProject* and hit `Continue`.
-Finally, add a sample title, such as "Illumina barcode sequencing from mutational antigenic profiling of Crowe lab antibodies using yeast-displayed SARS-CoV-2 RBD."
+Finally, add a sample title, such as "Illumina barcode sequencing from breadth profiling of Vir antibodies using yeast-displayed sarbecovirus RBDs."
 Then hit `Continue`, make sure everything looks correct, then hit `Submit`.
 
-After a brief bit of processing, the *BioSample* submission should show up, along with a sample accession that will be in the format of *SAMN16054076*.
+After a brief bit of processing, the *BioSample* submission should show up, along with a sample accession that will be in the format of *SAMN18316011*.
 Add this sample accession to [upload_config.yaml](upload_config.yaml) as the value for the *biosample_accession* key.
 
 ## Upload the sequencing data
@@ -100,7 +100,7 @@ It then uses FTP to upload them to the SRA.
 You can run the notebook interactively, but it will take a little while so make sure it doesn't time out.
 If you want to instead submit it via `slurm`, do this with:
 
-    sbatch --wrap="jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=-1 upload_to_SRA.ipynb" --time 2-0
+    sbatch --wrap="jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=-1 make_and_upload_tar.ipynb" --time 1-0
 
 After you have finished running [make_and_upload_tar.ipynb](make_and_upload_tar.ipynb), check carefully to make sure the FTP upload was completed.
 If needed, you can manually log into the FTP site to see the file and use `ls` to see the size of what has been transferred.
