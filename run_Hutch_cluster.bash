@@ -7,5 +7,5 @@ snakemake \
     --latency-wait 30 \
     --use-envmodules \
     --use-conda \
-    --conda-prefix /fh/fast/bloom_j/software/miniconda3/envs/SARS-CoV-2-RBD_MAP \
+    --conda-prefix /fh/fast/bloom_j/computational_notebooks/tstarr/2020/SARSr-CoV_RBD_MAP/env/ \
     -R make_summary

@@ -48,8 +48,8 @@ print(f"Using alignparse version {alignparse.__version__}")
 print(f"Using dms_variants version {dms_variants.__version__}")
 ```
 
-    Using alignparse version 0.2.4
-    Using dms_variants version 0.8.6
+    Using alignparse version 0.1.6
+    Using dms_variants version 0.8.5
 
 
 Ignore warnings that clutter output:
@@ -243,20 +243,6 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>0.444</td>
       <td>864623.0</td>
       <td>[/shared/ngs/illumina/tstarr/201123_D00300_1119_BHJKJTBCX3/Unaligned/Project_tstarr/expt72_lib1_Abneg_S132_R1_001.fastq.gz, /shared/ngs/illumina/tstarr/201116_D00300_1113_BHJKKFBCX3/Unaligned/Project_tstarr/expt72_lib1_Abneg_S36_R1_001.fastq.gz]</td>
-    </tr>
-    <tr>
-      <td>201106</td>
-      <td>expt_71</td>
-      <td>lib1</td>
-      <td>S2X259</td>
-      <td>59</td>
-      <td>ng_per_mL</td>
-      <td>Vir</td>
-      <td>escape</td>
-      <td>expt_71-S2X259-59-escape</td>
-      <td>0.421</td>
-      <td>805434.0</td>
-      <td>[/shared/ngs/illumina/tstarr/201123_D00300_1119_BHJKJTBCX3/Unaligned/Project_tstarr/expt69_lib1_Abneg_S123_R1_001.fastq.gz, /shared/ngs/illumina/tstarr/201116_D00300_1113_BHJKKFBCX3/Unaligned/Project_tstarr/expt69_lib1_Abneg_S27_R1_001.fastq.gz]</td>
     </tr>
     <tr>
       <td>201106</td>
@@ -786,7 +772,7 @@ display(HTML(fates
   </thead>
   <tbody>
     <tr>
-      <th rowspan="19" valign="top">lib1</th>
+      <th rowspan="18" valign="top">lib1</th>
       <th>expt_68-73-none-0-reference</th>
       <td>213176</td>
       <td>2455034</td>
@@ -817,14 +803,6 @@ display(HTML(fates
       <td>105003</td>
       <td>25151</td>
       <td>1459938</td>
-    </tr>
-    <tr>
-      <th>expt_71-S2X259-59-escape</th>
-      <td>51926</td>
-      <td>505386</td>
-      <td>120975</td>
-      <td>27948</td>
-      <td>1715892</td>
     </tr>
     <tr>
       <th>expt_72-S2X58-18-escape</th>
@@ -976,7 +954,9 @@ _ = barcode_fate_plot.draw()
 ```
 
 
+    
 ![png](count_variants_files/count_variants_40_0.png)
+    
 
 
 ## Output csv of barcode counts
