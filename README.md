@@ -1,7 +1,7 @@
 # Antigenic profiling of sarbecovirus RBDs
 Analysis of antibody binding to a barcoded pool of sarbecovirus RBD variants.
 
-Study and analysis by Tyler Starr, Amin Addetia, Allie Greaney, [Jesse Bloom](https://research.fhcrc.org/bloom/en.html), and co-authors.
+Study and analysis by Tyler Starr, Amin Addetia, Allie Greaney, [Jesse Bloom](https://research.fhcrc.org/bloom/en.html), and co-authors. See the [preprint](https://www.biorxiv.org/content/10.1101/2021.04.06.438709v1) for more details.
 
 ## Summary of workflow and results
 For a summary of the workflow and links to key results files, [click here](results/summary/summary.md).
