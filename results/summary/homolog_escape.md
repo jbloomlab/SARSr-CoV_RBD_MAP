@@ -44,7 +44,7 @@ sessionInfo()
 
     ## R version 3.6.2 (2019-12-12)
     ## Platform: x86_64-pc-linux-gnu (64-bit)
-    ## Running under: Ubuntu 18.04.4 LTS
+    ## Running under: Ubuntu 18.04.5 LTS
     ## 
     ## Matrix products: default
     ## BLAS/LAPACK: /app/software/OpenBLAS/0.3.7-GCC-8.3.0/lib/libopenblas_haswellp-r0.3.7.so
@@ -159,6 +159,29 @@ ggplot(dt,aes(x=target,y=escape_frac))+
     ## Warning: Removed 42 rows containing non-finite values (stat_summary).
 
 <img src="homolog_escape_files/figure-gfm/escape_frac_vioplot-1.png" style="display: block; margin: auto;" />
+Look at distribution of standard error across internal barcodes
+
+``` r
+test <- expand.grid(list(RBD=levels(dt$target),antibody=unique(dt$antibody)))
+test <- test[test$antibody %in% c("S2D106","S2E12","S2H13","S2H14","S2H58","S2H97","S2X16","S2X227","S2X35","S2X58","S304","S309"),]
+
+test$sem_escape <- as.numeric(NA)
+test$median <- as.numeric(NA)
+test$n <- as.numeric(NA)
+for(i in 1:nrow(test)){
+  test$sem_escape[i] <- sd(dt[target==test$RBD[i] & antibody==test$antibody[i],escape_frac],na.rm=T)/sqrt(sum(!is.na(dt[target==test$RBD[i] & antibody==test$antibody[i],escape_frac])))  
+  test$mean[i] <- mean(dt[target==test$RBD[i] & antibody==test$antibody[i],escape_frac],na.rm=T)
+  test$n[i] <- sum(!is.na(dt[target==test$RBD[i] & antibody==test$antibody[i],escape_frac]))
+}
+
+plot(test$mean,test$sem_escape,pch=16,xlab="mean escape fraction across barcodes",ylab="SEM",col="#00000067")
+```
+
+<img src="homolog_escape_files/figure-gfm/internal_variance-1.png" style="display: block; margin: auto;" />
+
+``` r
+invisible(dev.print(pdf, paste(config$escape_scores_dir,"/error_vs_mean_escape_frac.pdf",sep=""),useDingbats=F))
+```
 
 Collapse each homolog escape fraction to its median across barcodes.
 

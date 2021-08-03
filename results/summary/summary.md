@@ -17,3 +17,5 @@ Here is the Markdown output of each notebook in the workflow:
 2. [Compute escape fractions](compute_barcode_escape.md) for individual barcodes.
 
 3. [Determine homolog escape fraction](homolog_escape.md) averaged across all barcodes. Generates summary plots including heatmaps.
+
+4. For antibodies with more quantitative titration escape, [determine homolog EC50s](homolog_EC50.md) averaged across all barcodes. Generates summary plots including heatmaps.
