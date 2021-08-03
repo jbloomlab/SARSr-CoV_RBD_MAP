@@ -166,6 +166,15 @@ antibodies_ordered:
   - S2H14
   - S2H14_stringent
   - S2X227
+  - S2K146_0
+  - S2K146_0-01
+  - S2K146_0-1
+  - S2K146_1
+  - S2K146_10
+  - S2K146_100
+  - S2K146_1000
+  - S2K146_10000
+  
 
 # Input files for analyses from the data subdirectory
 sarbecovirus_alignment: data/RBD_aa_aligned.fasta

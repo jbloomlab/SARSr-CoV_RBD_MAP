@@ -93,6 +93,25 @@ ggplot(dt,aes(x=target,y=escape_frac))+
   ggtitle("escape frac by homolog")+xlab("homolog")+theme(axis.text.x=element_text(angle=-90,hjust=0))+
   facet_wrap(~antibody,ncol=1)
 
+
+```
+Look at distribution of standard error across internal barcodes
+```{r internal_variance, fig.width=3.75, fig.height=4, fig.align="center", dpi=300,dev="png"}
+test <- expand.grid(list(RBD=levels(dt$target),antibody=unique(dt$antibody)))
+test <- test[test$antibody %in% c("S2D106","S2E12","S2H13","S2H14","S2H58","S2H97","S2X16","S2X227","S2X35","S2X58","S304","S309"),]
+
+test$sem_escape <- as.numeric(NA)
+test$median <- as.numeric(NA)
+test$n <- as.numeric(NA)
+for(i in 1:nrow(test)){
+  test$sem_escape[i] <- sd(dt[target==test$RBD[i] & antibody==test$antibody[i],escape_frac],na.rm=T)/sqrt(sum(!is.na(dt[target==test$RBD[i] & antibody==test$antibody[i],escape_frac])))  
+  test$mean[i] <- mean(dt[target==test$RBD[i] & antibody==test$antibody[i],escape_frac],na.rm=T)
+  test$n[i] <- sum(!is.na(dt[target==test$RBD[i] & antibody==test$antibody[i],escape_frac]))
+}
+
+plot(test$mean,test$sem_escape,pch=16,xlab="mean escape fraction across barcodes",ylab="SEM",col="#00000067")
+invisible(dev.print(pdf, paste(config$escape_scores_dir,"/error_vs_mean_escape_frac.pdf",sep=""),useDingbats=F))
+
 ```
 
 Collapse each homolog escape fraction to its median across barcodes.
