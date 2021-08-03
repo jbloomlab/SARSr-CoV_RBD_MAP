@@ -70,6 +70,7 @@ rule make_summary:
         count_variants=nb_markdown('count_variants.ipynb'),
         compute_barcode_escape='results/summary/compute_barcode_escape.md',
         homolog_escape='results/summary/homolog_escape.md',
+        homolog_EC50='results/summary/homolog_EC50.md',
     output:
         summary = os.path.join(config['summary_dir'], 'summary.md')
     run:
@@ -97,6 +98,8 @@ rule make_summary:
             2. [Compute escape fractions]({path(input.compute_barcode_escape)}) for individual barcodes.
             
             3. [Determine homolog escape fraction]({path(input.homolog_escape)}) averaged across all barcodes. Generates summary plots including heatmaps.
+            
+            4. For antibodies with more quantitative titration escape, [determine homolog EC50s]({path(input.homolog_EC50)}) averaged across all barcodes. Generates summary plots including heatmaps.
                
             """
             ).strip())
@@ -109,6 +112,26 @@ rule make_rulegraph:
         os.path.join(config['summary_dir'], 'rulegraph.svg')
     shell:
         "snakemake --forceall --rulegraph | dot -Tsvg > {output}"
+
+rule homolog_EC50:
+    input:
+        config['escape_fracs_barcodes']
+    output:
+        config['EC50_homologs'],
+        md='results/summary/homolog_EC50.md',
+        md_files=directory('results/summary/homolog_EC50_files')
+    envmodules:
+        'R/3.6.2-foss-2019b'
+    params:
+        nb='homolog_EC50.Rmd',
+        md='homolog_EC50.md',
+        md_files='homolog_EC50_files'
+    shell:
+        """
+        R -e \"rmarkdown::render(input=\'{params.nb}\')\";
+        mv {params.md} {output.md};
+        mv {params.md_files} {output.md_files}
+        """
 
 rule homolog_escape:
     input:

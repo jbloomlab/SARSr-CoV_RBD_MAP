@@ -149,7 +149,7 @@ Clade2_extant:
   - Rs4081
   - Rp3
 
-#antibodies in desired order for plotting
+#antibodies in desired order for plotting for binary escape maps
 antibodies_ordered:
   - S309
   - S2H97
@@ -166,6 +166,10 @@ antibodies_ordered:
   - S2H14
   - S2H14_stringent
   - S2X227
+  - S2K146_100
+
+#antibody samples used in EC50 calc
+S2K146_EC50:
   - S2K146_0
   - S2K146_0-01
   - S2K146_0-1
@@ -174,7 +178,6 @@ antibodies_ordered:
   - S2K146_100
   - S2K146_1000
   - S2K146_10000
-  
 
 # Input files for analyses from the data subdirectory
 sarbecovirus_alignment: data/RBD_aa_aligned.fasta
@@ -192,4 +195,7 @@ escape_fracs_homologs: results/escape_scores/escape_scores_homologs.csv
 escape_muts: data/mutant_escape.csv
 compare_mut_dir: results/compare_mut
 
+EC50_scores_dir: results/EC50_scores
+EC50_barcodes: results/EC50_scores/EC50_scores_homolog_barcodes.csv
+EC50_homologs: results/EC50_scores/EC50_scores_homologs.csv
 
