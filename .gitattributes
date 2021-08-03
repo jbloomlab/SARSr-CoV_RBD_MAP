@@ -1,0 +1,2 @@
+results/EC50_scores/EC50_scores_homolog_barcodes.csv filter=lfs diff=lfs merge=lfs -text
+results/EC50_scores/EC50_scores_homologs.csv filter=lfs diff=lfs merge=lfs -text
