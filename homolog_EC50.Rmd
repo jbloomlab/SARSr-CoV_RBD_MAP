@@ -47,7 +47,7 @@ Read in table of escape scores for barcodes, also annotated with variant counts 
 ```{r input_data}
 dt <- data.table(read.csv(file=config$escape_fracs_barcodes,stringsAsFactors = F))
 dt <- dt[pre_count>0 & !is.na(expression),]
-dt <- dt[antibody %in% config$S2K146_EC50 & target %in% config$targets_ordered,]
+dt <- dt[antibody %in% c(config$S2K146_EC50,config$S2K146UCA_EC50,config$S2E12_EC50) & target %in% config$targets_ordered,]
 ```
 
 ## Filtering
@@ -133,7 +133,7 @@ fit_EC50 <- function(bind_vec,conc_vec){
   return(summary(fit)$coefficients[c("EC50","a","b","n"),"Estimate"])
 }
 
-dt[,c("EC50") := tryCatch(fit_EC50(bind_frac,conc)[1],error=function(e){list(as.numeric(NA))}),by=c("library","barcode")]
+dt[,c("EC50") := tryCatch(fit_EC50(bind_frac,conc)[1],error=function(e){list(as.numeric(NA))}),by=c("library","barcode","mAb")]
 
 #collapse to one row per barcode
 dt <- unique(dt[,.(library,target,barcode,expression,mAb,EC50)])

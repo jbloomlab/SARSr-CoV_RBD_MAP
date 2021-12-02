@@ -167,6 +167,8 @@ antibodies_ordered:
   - S2H14_stringent
   - S2X227
   - S2K146_100
+  - S2K146_UCA_100
+  - S2E12_100
 
 #antibody samples used in EC50 calc
 S2K146_EC50:
@@ -178,6 +180,27 @@ S2K146_EC50:
   - S2K146_100
   - S2K146_1000
   - S2K146_10000
+  
+S2K146UCA_EC50:
+  - S2K146UCA_0
+  - S2K146UCA_0-01
+  - S2K146UCA_0-1
+  - S2K146UCA_1
+  - S2K146UCA_10
+  - S2K146UCA_100
+  - S2K146UCA_1000
+  - S2K146UCA_10000
+
+#antibody samples used in EC50 calc
+S2E12_EC50:
+  - S2E12_0
+  - S2E12_0-01
+  - S2E12_0-1
+  - S2E12_1
+  - S2E12_10
+  - S2E12_100
+  - S2E12_1000
+  - S2E12_10000
 
 # Input files for analyses from the data subdirectory
 sarbecovirus_alignment: data/RBD_aa_aligned.fasta

@@ -97,7 +97,7 @@ escape, and the “extant” sarb RBDs in th elibrary.
 ``` r
 dt <- data.table(read.csv(file=config$escape_fracs_barcodes,stringsAsFactors = F))
 dt <- dt[pre_count>0 & !is.na(expression),]
-dt <- dt[antibody %in% config$S2K146_EC50 & target %in% config$targets_ordered,]
+dt <- dt[antibody %in% c(config$S2K146_EC50,config$S2K146UCA_EC50,config$S2E12_EC50) & target %in% config$targets_ordered,]
 ```
 
 ## Filtering
@@ -106,7 +106,7 @@ We will use the per-barcode pre\_count and expression scores to filter
 out escape scores used in computing per-homolog escape.
 
 First, let’s look at the distribution of pre-counts across barcodes. The
-median pre-count is 254. Vertical lines on the two plots below indicate
+median pre-count is 358. Vertical lines on the two plots below indicate
 a threshold for pre\_count of 1/2 that of the median pre-count, which is
 what we’ll apply below. This is a stringent cutoff, but we have such a
 high degree of over-barcoding that we can do this.
@@ -130,7 +130,7 @@ abline(v=0.5*median(dt$pre_count),lty=2,col="red")
 
 Remove barcode measurements for those where pre-count is less than half
 the median pre-count. This corresponds to removing variants with less
-than 127 pre-sort counts.
+than 179 pre-sort counts.
 
 ``` r
 dt <- dt[pre_count > 0.5*median(dt$pre_count),]
@@ -160,9 +160,9 @@ ggplot(dt,aes(x=target,y=escape_frac))+
   facet_wrap(~antibody,ncol=1)
 ```
 
-    ## Warning: Removed 8 rows containing non-finite values (stat_ydensity).
+    ## Warning: Removed 40 rows containing non-finite values (stat_ydensity).
 
-    ## Warning: Removed 8 rows containing non-finite values (stat_summary).
+    ## Warning: Removed 40 rows containing non-finite values (stat_summary).
 
 <img src="homolog_EC50_files/figure-gfm/escape_frac_vioplot-1.png" style="display: block; margin: auto;" />
 
@@ -208,7 +208,7 @@ fit_EC50 <- function(bind_vec,conc_vec){
   return(summary(fit)$coefficients[c("EC50","a","b","n"),"Estimate"])
 }
 
-dt[,c("EC50") := tryCatch(fit_EC50(bind_frac,conc)[1],error=function(e){list(as.numeric(NA))}),by=c("library","barcode")]
+dt[,c("EC50") := tryCatch(fit_EC50(bind_frac,conc)[1],error=function(e){list(as.numeric(NA))}),by=c("library","barcode","mAb")]
 
 #collapse to one row per barcode
 dt <- unique(dt[,.(library,target,barcode,expression,mAb,EC50)])
@@ -224,9 +224,9 @@ ggplot(dt,aes(x=target,y=log10(EC50)))+
   facet_wrap(~mAb,ncol=1)
 ```
 
-    ## Warning: Removed 230 rows containing non-finite values (stat_ydensity).
+    ## Warning: Removed 546 rows containing non-finite values (stat_ydensity).
 
-    ## Warning: Removed 230 rows containing non-finite values (stat_summary).
+    ## Warning: Removed 546 rows containing non-finite values (stat_summary).
 
 <img src="homolog_EC50_files/figure-gfm/EC50_vioplot-1.png" style="display: block; margin: auto;" />
 
@@ -243,7 +243,7 @@ dt_collapse[is.na(median_EC50),n_barcodes:=NA]
 
 Make histograms showing the typical number of barcodes on which a
 homolog escape fraction was averaged across. The median number of
-barcodes across all homolog escape fracs is 263.
+barcodes across all homolog escape fracs is 265.
 
 ``` r
 hist(dt_collapse$n_barcodes,main="",col="gray50",xlab="number of barcodes",breaks=20)
