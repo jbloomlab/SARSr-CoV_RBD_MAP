@@ -19,6 +19,11 @@ results/*
 results/escape_scores/*
 !results/escape_scores/escape_scores_homologs.csv
 
+!results/EC50_scores
+results/EC50_scores/*
+!results/EC50_scores/EC50_scores_homolog_barcodes.csv
+!results/EC50_scores/EC50_scores_homologs.csv
+
 !results/counts
 results/counts/*
 !results/counts/variant_counts.csv

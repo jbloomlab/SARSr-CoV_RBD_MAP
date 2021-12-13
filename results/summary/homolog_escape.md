@@ -101,7 +101,7 @@ We will use the per-barcode pre\_count and expression scores to filter
 out escape scores used in computing per-homolog escape.
 
 First, let’s look at the distribution of pre-counts across barcodes. The
-median pre-count is 286. Vertical lines on the two plots below indicate
+median pre-count is 328. Vertical lines on the two plots below indicate
 a threshold for pre\_count of 1/2 that of the median pre-count, which is
 what we’ll apply below.
 
@@ -124,7 +124,7 @@ abline(v=0.5*median(dt$pre_count),lty=2,col="red")
 
 Remove barcode measurements for those where pre-count is less than half
 the median pre-count. This corresponds to removing variants with less
-than 143 pre-sort counts.
+than 164 pre-sort counts.
 
 ``` r
 dt <- dt[pre_count > 0.5*median(dt$pre_count),]
@@ -154,11 +154,34 @@ ggplot(dt,aes(x=target,y=escape_frac))+
   facet_wrap(~antibody,ncol=1)
 ```
 
-    ## Warning: Removed 34 rows containing non-finite values (stat_ydensity).
+    ## Warning: Removed 65 rows containing non-finite values (stat_ydensity).
 
-    ## Warning: Removed 34 rows containing non-finite values (stat_summary).
+    ## Warning: Removed 65 rows containing non-finite values (stat_summary).
 
 <img src="homolog_escape_files/figure-gfm/escape_frac_vioplot-1.png" style="display: block; margin: auto;" />
+Look at distribution of standard error across internal barcodes
+
+``` r
+test <- expand.grid(list(RBD=levels(dt$target),antibody=unique(dt$antibody)))
+test <- test[test$antibody %in% c("S2D106","S2E12","S2H13","S2H14","S2H58","S2H97","S2X16","S2X227","S2X35","S2X58","S304","S309"),]
+
+test$sem_escape <- as.numeric(NA)
+test$median <- as.numeric(NA)
+test$n <- as.numeric(NA)
+for(i in 1:nrow(test)){
+  test$sem_escape[i] <- sd(dt[target==test$RBD[i] & antibody==test$antibody[i],escape_frac],na.rm=T)/sqrt(sum(!is.na(dt[target==test$RBD[i] & antibody==test$antibody[i],escape_frac])))  
+  test$mean[i] <- mean(dt[target==test$RBD[i] & antibody==test$antibody[i],escape_frac],na.rm=T)
+  test$n[i] <- sum(!is.na(dt[target==test$RBD[i] & antibody==test$antibody[i],escape_frac]))
+}
+
+plot(test$mean,test$sem_escape,pch=16,xlab="mean escape fraction across barcodes",ylab="SEM",col="#00000067")
+```
+
+<img src="homolog_escape_files/figure-gfm/internal_variance-1.png" style="display: block; margin: auto;" />
+
+``` r
+invisible(dev.print(pdf, paste(config$escape_scores_dir,"/error_vs_mean_escape_frac.pdf",sep=""),useDingbats=F))
+```
 
 Collapse each homolog escape fraction to its median across barcodes.
 
@@ -187,7 +210,7 @@ dt_collapse[escape_frac>1,escape_frac:=1]
 
 Also make histograms showing the typical number of barcodes on which a
 homolog escape fraction was averaged across. The median number of
-barcodes across all homolog escape fracs is 316.
+barcodes across all homolog escape fracs is 327.
 
 ``` r
 hist(dt_collapse$n_barcodes,main="",col="gray50",xlab="number of barcodes",breaks=20)

@@ -193,11 +193,11 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_68-73</td>
       <td>lib1</td>
       <td>none</td>
-      <td>0</td>
+      <td>0.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>reference</td>
-      <td>expt_68-73-none-0-reference</td>
+      <td>expt_68-73-none-0.0-reference</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>[/shared/ngs/illumina/tstarr/201123_D00300_1119_BHJKJTBCX3/Unaligned/Project_tstarr/expt68_73_hom_ref_S119_R1_001.fastq.gz, /shared/ngs/illumina/tstarr/201116_D00300_1113_BHJKKFBCX3/Unaligned/Project_tstarr/expt68_73_hom_ref_S23_R1_001.fastq.gz]</td>
@@ -207,13 +207,13 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_68</td>
       <td>lib1</td>
       <td>S309</td>
-      <td>421</td>
+      <td>421.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>escape</td>
-      <td>expt_68-S309-421-escape</td>
+      <td>expt_68-S309-421.0-escape</td>
       <td>0.490</td>
-      <td>858224.0</td>
+      <td>858224</td>
       <td>[/shared/ngs/illumina/tstarr/201123_D00300_1119_BHJKJTBCX3/Unaligned/Project_tstarr/expt70_lib1_Abneg_S126_R1_001.fastq.gz, /shared/ngs/illumina/tstarr/201116_D00300_1113_BHJKKFBCX3/Unaligned/Project_tstarr/expt70_lib1_Abneg_S30_R1_001.fastq.gz]</td>
     </tr>
     <tr>
@@ -221,13 +221,13 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_69</td>
       <td>lib1</td>
       <td>S2E12</td>
-      <td>56</td>
+      <td>56.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>escape</td>
-      <td>expt_69-S2E12-56-escape</td>
+      <td>expt_69-S2E12-56.0-escape</td>
       <td>0.890</td>
-      <td>1754530.0</td>
+      <td>1754530</td>
       <td>[/shared/ngs/illumina/tstarr/201123_D00300_1119_BHJKJTBCX3/Unaligned/Project_tstarr/expt71_lib1_Abneg_S129_R1_001.fastq.gz, /shared/ngs/illumina/tstarr/201116_D00300_1113_BHJKKFBCX3/Unaligned/Project_tstarr/expt71_lib1_Abneg_S33_R1_001.fastq.gz]</td>
     </tr>
     <tr>
@@ -235,13 +235,13 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_70</td>
       <td>lib1</td>
       <td>S2X35</td>
-      <td>70</td>
+      <td>70.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>escape</td>
-      <td>expt_70-S2X35-70-escape</td>
+      <td>expt_70-S2X35-70.0-escape</td>
       <td>0.444</td>
-      <td>864623.0</td>
+      <td>864623</td>
       <td>[/shared/ngs/illumina/tstarr/201123_D00300_1119_BHJKJTBCX3/Unaligned/Project_tstarr/expt72_lib1_Abneg_S132_R1_001.fastq.gz, /shared/ngs/illumina/tstarr/201116_D00300_1113_BHJKKFBCX3/Unaligned/Project_tstarr/expt72_lib1_Abneg_S36_R1_001.fastq.gz]</td>
     </tr>
     <tr>
@@ -249,13 +249,13 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_72</td>
       <td>lib1</td>
       <td>S2X58</td>
-      <td>18</td>
+      <td>18.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>escape</td>
-      <td>expt_72-S2X58-18-escape</td>
+      <td>expt_72-S2X58-18.0-escape</td>
       <td>0.925</td>
-      <td>1770393.0</td>
+      <td>1770393</td>
       <td>[/shared/ngs/illumina/tstarr/201123_D00300_1119_BHJKJTBCX3/Unaligned/Project_tstarr/expt72_homolog_Abneg_S134_R1_001.fastq.gz, /shared/ngs/illumina/tstarr/201116_D00300_1113_BHJKKFBCX3/Unaligned/Project_tstarr/expt72_homolog_Abneg_S38_R1_001.fastq.gz]</td>
     </tr>
     <tr>
@@ -263,13 +263,13 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_73</td>
       <td>lib1</td>
       <td>S304</td>
-      <td>46</td>
+      <td>46.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>escape</td>
-      <td>expt_73-S304-46-escape</td>
+      <td>expt_73-S304-46.0-escape</td>
       <td>0.412</td>
-      <td>817857.0</td>
+      <td>817857</td>
       <td>[/shared/ngs/illumina/tstarr/201123_D00300_1119_BHJKJTBCX3/Unaligned/Project_tstarr/expt73_homolog_Abneg_S137_R1_001.fastq.gz, /shared/ngs/illumina/tstarr/201116_D00300_1113_BHJKKFBCX3/Unaligned/Project_tstarr/expt73_homolog_Abneg_S41_R1_001.fastq.gz]</td>
     </tr>
     <tr>
@@ -277,11 +277,11 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_74-78</td>
       <td>lib1</td>
       <td>none</td>
-      <td>0</td>
+      <td>0.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>reference</td>
-      <td>expt_74-78-none-0-reference</td>
+      <td>expt_74-78-none-0.0-reference</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>[/shared/ngs/illumina/tstarr/201123_D00300_1119_BHJKJTBCX3/Unaligned/Project_tstarr/expt74_78_hom_ref_S161_R1_001.fastq.gz, /shared/ngs/illumina/tstarr/201116_D00300_1113_BHJKKFBCX3/Unaligned/Project_tstarr/expt74_78_hom_ref_S65_R1_001.fastq.gz]</td>
@@ -291,13 +291,13 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_74</td>
       <td>lib1</td>
       <td>S2H58</td>
-      <td>46</td>
+      <td>46.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>escape</td>
-      <td>expt_74-S2H58-46-escape</td>
+      <td>expt_74-S2H58-46.0-escape</td>
       <td>0.893</td>
-      <td>1434377.0</td>
+      <td>1434377</td>
       <td>[/shared/ngs/illumina/tstarr/201123_D00300_1119_BHJKJTBCX3/Unaligned/Project_tstarr/expt74_homolog_Abneg_S140_R1_001.fastq.gz, /shared/ngs/illumina/tstarr/201116_D00300_1113_BHJKKFBCX3/Unaligned/Project_tstarr/expt74_homolog_Abneg_S44_R1_001.fastq.gz]</td>
     </tr>
     <tr>
@@ -305,13 +305,13 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_75</td>
       <td>lib1</td>
       <td>S2D106</td>
-      <td>68</td>
+      <td>68.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>escape</td>
-      <td>expt_75-S2D106-68-escape</td>
+      <td>expt_75-S2D106-68.0-escape</td>
       <td>0.890</td>
-      <td>1494533.0</td>
+      <td>1494533</td>
       <td>[/shared/ngs/illumina/tstarr/201123_D00300_1119_BHJKJTBCX3/Unaligned/Project_tstarr/expt75_homolog_Abneg_S143_R1_001.fastq.gz, /shared/ngs/illumina/tstarr/201116_D00300_1113_BHJKKFBCX3/Unaligned/Project_tstarr/expt75_homolog_Abneg_S47_R1_001.fastq.gz]</td>
     </tr>
     <tr>
@@ -319,13 +319,13 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_77</td>
       <td>lib1</td>
       <td>S2X16</td>
-      <td>54</td>
+      <td>54.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>escape</td>
-      <td>expt_77-S2X16-54-escape</td>
+      <td>expt_77-S2X16-54.0-escape</td>
       <td>0.891</td>
-      <td>1247076.0</td>
+      <td>1247076</td>
       <td>[/shared/ngs/illumina/tstarr/201123_D00300_1119_BHJKJTBCX3/Unaligned/Project_tstarr/expt77_homolog_Abneg_S149_R1_001.fastq.gz, /shared/ngs/illumina/tstarr/201116_D00300_1113_BHJKKFBCX3/Unaligned/Project_tstarr/expt77_homolog_Abneg_S53_R1_001.fastq.gz]</td>
     </tr>
     <tr>
@@ -333,13 +333,13 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_78</td>
       <td>lib1</td>
       <td>S2X227</td>
-      <td>138</td>
+      <td>138.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>escape</td>
-      <td>expt_78-S2X227-138-escape</td>
+      <td>expt_78-S2X227-138.0-escape</td>
       <td>0.933</td>
-      <td>1307137.0</td>
+      <td>1307137</td>
       <td>[/shared/ngs/illumina/tstarr/201123_D00300_1119_BHJKJTBCX3/Unaligned/Project_tstarr/expt78_homolog_Abneg_S152_R1_001.fastq.gz, /shared/ngs/illumina/tstarr/201116_D00300_1113_BHJKKFBCX3/Unaligned/Project_tstarr/expt78_homolog_Abneg_S56_R1_001.fastq.gz]</td>
     </tr>
     <tr>
@@ -347,11 +347,11 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_79-81</td>
       <td>lib1</td>
       <td>none</td>
-      <td>0</td>
+      <td>0.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>reference</td>
-      <td>expt_79-81-none-0-reference</td>
+      <td>expt_79-81-none-0.0-reference</td>
       <td>NaN</td>
       <td>NaN</td>
       <td>[/shared/ngs/illumina/tstarr/210115_D00300_1154_BHK3HCBCX3/Unaligned/Project_tstarr/expt_79-81_hom_ref_S85_R1_001.fastq.gz]</td>
@@ -361,13 +361,13 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_79</td>
       <td>lib1</td>
       <td>S2H97</td>
-      <td>58</td>
+      <td>58.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>escape</td>
-      <td>expt_79-S2H97-58-escape</td>
+      <td>expt_79-S2H97-58.0-escape</td>
       <td>0.056</td>
-      <td>107488.0</td>
+      <td>107488</td>
       <td>[/shared/ngs/illumina/tstarr/210115_D00300_1154_BHK3HCBCX3/Unaligned/Project_tstarr/expt79_hom_Abneg_S88_R1_001.fastq.gz]</td>
     </tr>
     <tr>
@@ -375,13 +375,13 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_79strin</td>
       <td>lib1</td>
       <td>S2H97_stringent</td>
-      <td>58</td>
+      <td>58.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>escape</td>
-      <td>expt_79strin-S2H97_stringent-58-escape</td>
+      <td>expt_79strin-S2H97_stringent-58.0-escape</td>
       <td>0.007</td>
-      <td>9624.0</td>
+      <td>9624</td>
       <td>[/shared/ngs/illumina/tstarr/210115_D00300_1154_BHK3HCBCX3/Unaligned/Project_tstarr/expt79_hom_string_S89_R1_001.fastq.gz]</td>
     </tr>
     <tr>
@@ -389,13 +389,13 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_80</td>
       <td>lib1</td>
       <td>S2H13</td>
-      <td>56</td>
+      <td>56.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>escape</td>
-      <td>expt_80-S2H13-56-escape</td>
+      <td>expt_80-S2H13-56.0-escape</td>
       <td>0.878</td>
-      <td>1364359.0</td>
+      <td>1364359</td>
       <td>[/shared/ngs/illumina/tstarr/210115_D00300_1154_BHK3HCBCX3/Unaligned/Project_tstarr/expt80_hom_Abneg_S92_R1_001.fastq.gz]</td>
     </tr>
     <tr>
@@ -403,13 +403,13 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_80strin</td>
       <td>lib1</td>
       <td>S2H13_stringent</td>
-      <td>56</td>
+      <td>56.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>escape</td>
-      <td>expt_80strin-S2H13_stringent-56-escape</td>
+      <td>expt_80strin-S2H13_stringent-56.0-escape</td>
       <td>0.843</td>
-      <td>721340.0</td>
+      <td>721340</td>
       <td>[/shared/ngs/illumina/tstarr/210115_D00300_1154_BHK3HCBCX3/Unaligned/Project_tstarr/expt80_hom_string_S93_R1_001.fastq.gz]</td>
     </tr>
     <tr>
@@ -417,13 +417,13 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_81</td>
       <td>lib1</td>
       <td>S2H14</td>
-      <td>105</td>
+      <td>105.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>escape</td>
-      <td>expt_81-S2H14-105-escape</td>
+      <td>expt_81-S2H14-105.0-escape</td>
       <td>0.986</td>
-      <td>1874644.0</td>
+      <td>1874644</td>
       <td>[/shared/ngs/illumina/tstarr/210115_D00300_1154_BHK3HCBCX3/Unaligned/Project_tstarr/expt81_hom_Abneg_S96_R1_001.fastq.gz]</td>
     </tr>
     <tr>
@@ -431,14 +431,378 @@ display(HTML(barcode_runs.to_html(index=False)))
       <td>expt_81strin</td>
       <td>lib1</td>
       <td>S2H14_stringent</td>
-      <td>105</td>
+      <td>105.00</td>
       <td>ng_per_mL</td>
       <td>Vir</td>
       <td>escape</td>
-      <td>expt_81strin-S2H14_stringent-105-escape</td>
+      <td>expt_81strin-S2H14_stringent-105.0-escape</td>
       <td>0.955</td>
-      <td>959111.0</td>
+      <td>959111</td>
       <td>[/shared/ngs/illumina/tstarr/210115_D00300_1154_BHK3HCBCX3/Unaligned/Project_tstarr/expt81_hom_string_S97_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210526</td>
+      <td>expt_130</td>
+      <td>lib1</td>
+      <td>none</td>
+      <td>0.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>reference</td>
+      <td>expt_130-none-0.0-reference</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>[/shared/ngs/illumina/tstarr/210603_D00300_1246_BHLJ3FBCX3/Unaligned/Project_tstarr/expt_130_hom_ref_S9_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210526</td>
+      <td>expt_130</td>
+      <td>lib1</td>
+      <td>S2K146_0</td>
+      <td>0.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_130-S2K146_0-0.0-escape</td>
+      <td>0.999</td>
+      <td>1,925,889</td>
+      <td>[/shared/ngs/illumina/tstarr/210603_D00300_1246_BHLJ3FBCX3/Unaligned/Project_tstarr/expt130_hom_conc0_S12_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210526</td>
+      <td>expt_130</td>
+      <td>lib1</td>
+      <td>S2K146_0-01</td>
+      <td>0.01</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_130-S2K146_0-01-0.01-escape</td>
+      <td>0.998</td>
+      <td>1,976,840</td>
+      <td>[/shared/ngs/illumina/tstarr/210603_D00300_1246_BHLJ3FBCX3/Unaligned/Project_tstarr/expt130_hom_conc1_S13_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210526</td>
+      <td>expt_130</td>
+      <td>lib1</td>
+      <td>S2K146_0-1</td>
+      <td>0.10</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_130-S2K146_0-1-0.1-escape</td>
+      <td>0.916</td>
+      <td>2,107,894</td>
+      <td>[/shared/ngs/illumina/tstarr/210603_D00300_1246_BHLJ3FBCX3/Unaligned/Project_tstarr/expt130_hom_conc2_S14_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210526</td>
+      <td>expt_130</td>
+      <td>lib1</td>
+      <td>S2K146_1</td>
+      <td>1.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_130-S2K146_1-1.0-escape</td>
+      <td>0.681</td>
+      <td>1,299,775</td>
+      <td>[/shared/ngs/illumina/tstarr/210603_D00300_1246_BHLJ3FBCX3/Unaligned/Project_tstarr/expt130_hom_conc3_S15_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210526</td>
+      <td>expt_130</td>
+      <td>lib1</td>
+      <td>S2K146_10</td>
+      <td>10.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_130-S2K146_10-10.0-escape</td>
+      <td>0.638</td>
+      <td>1,196,303</td>
+      <td>[/shared/ngs/illumina/tstarr/210603_D00300_1246_BHLJ3FBCX3/Unaligned/Project_tstarr/expt130_hom_conc4_S16_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210526</td>
+      <td>expt_130</td>
+      <td>lib1</td>
+      <td>S2K146_100</td>
+      <td>100.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_130-S2K146_100-100.0-escape</td>
+      <td>0.606</td>
+      <td>1,254,684</td>
+      <td>[/shared/ngs/illumina/tstarr/210603_D00300_1246_BHLJ3FBCX3/Unaligned/Project_tstarr/expt130_hom_conc5_S17_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210526</td>
+      <td>expt_130</td>
+      <td>lib1</td>
+      <td>S2K146_1000</td>
+      <td>1000.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_130-S2K146_1000-1000.0-escape</td>
+      <td>0.596</td>
+      <td>1,237,406</td>
+      <td>[/shared/ngs/illumina/tstarr/210603_D00300_1246_BHLJ3FBCX3/Unaligned/Project_tstarr/expt130_hom_conc6_S18_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210526</td>
+      <td>expt_130</td>
+      <td>lib1</td>
+      <td>S2K146_10000</td>
+      <td>10000.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_130-S2K146_10000-10000.0-escape</td>
+      <td>0.577</td>
+      <td>1,332,900</td>
+      <td>[/shared/ngs/illumina/tstarr/210603_D00300_1246_BHLJ3FBCX3/Unaligned/Project_tstarr/expt130_hom_conc7_S19_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210914</td>
+      <td>expt_133-134</td>
+      <td>lib1</td>
+      <td>none</td>
+      <td>0.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>reference</td>
+      <td>expt_133-134-none-0.0-reference</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>[/shared/ngs/illumina/tstarr/210928_D00300_1332_BHMJ5GBCX3/Unaligned/Project_tstarr/e133_hom_ref_S9_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210914</td>
+      <td>expt_133</td>
+      <td>lib1</td>
+      <td>S2K146UCA_0</td>
+      <td>0.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_133-S2K146UCA_0-0.0-escape</td>
+      <td>0.984</td>
+      <td>2034609</td>
+      <td>[/shared/ngs/illumina/tstarr/210928_D00300_1332_BHMJ5GBCX3/Unaligned/Project_tstarr/e133_hom_0_S13_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210914</td>
+      <td>expt_133</td>
+      <td>lib1</td>
+      <td>S2K146UCA_0-01</td>
+      <td>0.01</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_133-S2K146UCA_0-01-0.01-escape</td>
+      <td>0.925</td>
+      <td>1856157</td>
+      <td>[/shared/ngs/illumina/tstarr/210928_D00300_1332_BHMJ5GBCX3/Unaligned/Project_tstarr/e133_hom_1_S14_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210914</td>
+      <td>expt_133</td>
+      <td>lib1</td>
+      <td>S2K146UCA_0-1</td>
+      <td>0.10</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_133-S2K146UCA_0-1-0.1-escape</td>
+      <td>0.884</td>
+      <td>1788202</td>
+      <td>[/shared/ngs/illumina/tstarr/210928_D00300_1332_BHMJ5GBCX3/Unaligned/Project_tstarr/e133_hom_2_S15_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210914</td>
+      <td>expt_133</td>
+      <td>lib1</td>
+      <td>S2K146UCA_1</td>
+      <td>1.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_133-S2K146UCA_1-1.0-escape</td>
+      <td>0.855</td>
+      <td>1834057</td>
+      <td>[/shared/ngs/illumina/tstarr/210928_D00300_1332_BHMJ5GBCX3/Unaligned/Project_tstarr/e133_hom_3_S16_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210914</td>
+      <td>expt_133</td>
+      <td>lib1</td>
+      <td>S2K146UCA_10</td>
+      <td>10.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_133-S2K146UCA_10-10.0-escape</td>
+      <td>0.783</td>
+      <td>1620784</td>
+      <td>[/shared/ngs/illumina/tstarr/210928_D00300_1332_BHMJ5GBCX3/Unaligned/Project_tstarr/e133_hom_4_S17_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210914</td>
+      <td>expt_133</td>
+      <td>lib1</td>
+      <td>S2K146UCA_100</td>
+      <td>100.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_133-S2K146UCA_100-100.0-escape</td>
+      <td>0.711</td>
+      <td>1426820</td>
+      <td>[/shared/ngs/illumina/tstarr/210928_D00300_1332_BHMJ5GBCX3/Unaligned/Project_tstarr/e133_hom_5_S18_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210914</td>
+      <td>expt_133</td>
+      <td>lib1</td>
+      <td>S2K146UCA_1000</td>
+      <td>1000.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_133-S2K146UCA_1000-1000.0-escape</td>
+      <td>0.645</td>
+      <td>1329884</td>
+      <td>[/shared/ngs/illumina/tstarr/210928_D00300_1332_BHMJ5GBCX3/Unaligned/Project_tstarr/e133_hom_6_S19_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210914</td>
+      <td>expt_133</td>
+      <td>lib1</td>
+      <td>S2K146UCA_10000</td>
+      <td>10000.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_133-S2K146UCA_10000-10000.0-escape</td>
+      <td>0.587</td>
+      <td>1200847</td>
+      <td>[/shared/ngs/illumina/tstarr/210928_D00300_1332_BHMJ5GBCX3/Unaligned/Project_tstarr/e133_hom_7_S20_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210914</td>
+      <td>expt_134</td>
+      <td>lib1</td>
+      <td>S2E12_0</td>
+      <td>0.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_134-S2E12_0-0.0-escape</td>
+      <td>0.983</td>
+      <td>1988571</td>
+      <td>[/shared/ngs/illumina/tstarr/210928_D00300_1332_BHMJ5GBCX3/Unaligned/Project_tstarr/e134_hom_0_S25_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210914</td>
+      <td>expt_134</td>
+      <td>lib1</td>
+      <td>S2E12_0-01</td>
+      <td>0.01</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_134-S2E12_0-01-0.01-escape</td>
+      <td>0.883</td>
+      <td>1755990</td>
+      <td>[/shared/ngs/illumina/tstarr/210928_D00300_1332_BHMJ5GBCX3/Unaligned/Project_tstarr/e134_hom_1_S26_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210914</td>
+      <td>expt_134</td>
+      <td>lib1</td>
+      <td>S2E12_0-1</td>
+      <td>0.10</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_134-S2E12_0-1-0.1-escape</td>
+      <td>0.880</td>
+      <td>1767227</td>
+      <td>[/shared/ngs/illumina/tstarr/210928_D00300_1332_BHMJ5GBCX3/Unaligned/Project_tstarr/e134_hom_2_S27_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210914</td>
+      <td>expt_134</td>
+      <td>lib1</td>
+      <td>S2E12_1</td>
+      <td>1.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_134-S2E12_1-1.0-escape</td>
+      <td>0.867</td>
+      <td>1704266</td>
+      <td>[/shared/ngs/illumina/tstarr/210928_D00300_1332_BHMJ5GBCX3/Unaligned/Project_tstarr/e134_hom_3_S28_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210914</td>
+      <td>expt_134</td>
+      <td>lib1</td>
+      <td>S2E12_10</td>
+      <td>10.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_134-S2E12_10-10.0-escape</td>
+      <td>0.820</td>
+      <td>1609391</td>
+      <td>[/shared/ngs/illumina/tstarr/210928_D00300_1332_BHMJ5GBCX3/Unaligned/Project_tstarr/e134_hom_4_S29_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210914</td>
+      <td>expt_134</td>
+      <td>lib1</td>
+      <td>S2E12_100</td>
+      <td>100.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_134-S2E12_100-100.0-escape</td>
+      <td>0.764</td>
+      <td>1493678</td>
+      <td>[/shared/ngs/illumina/tstarr/210928_D00300_1332_BHMJ5GBCX3/Unaligned/Project_tstarr/e134_hom_5_S30_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210914</td>
+      <td>expt_134</td>
+      <td>lib1</td>
+      <td>S2E12_1000</td>
+      <td>1000.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_134-S2E12_1000-1000.0-escape</td>
+      <td>0.727</td>
+      <td>1467076</td>
+      <td>[/shared/ngs/illumina/tstarr/210928_D00300_1332_BHMJ5GBCX3/Unaligned/Project_tstarr/e134_hom_6_S31_R1_001.fastq.gz]</td>
+    </tr>
+    <tr>
+      <td>210914</td>
+      <td>expt_134</td>
+      <td>lib1</td>
+      <td>S2E12_10000</td>
+      <td>10000.00</td>
+      <td>ng_per_mL</td>
+      <td>Vir</td>
+      <td>escape</td>
+      <td>expt_134-S2E12_10000-10000.0-escape</td>
+      <td>0.717</td>
+      <td>1430049</td>
+      <td>[/shared/ngs/illumina/tstarr/210928_D00300_1332_BHMJ5GBCX3/Unaligned/Project_tstarr/e134_hom_7_S32_R1_001.fastq.gz]</td>
     </tr>
   </tbody>
 </table>
@@ -556,12 +920,12 @@ display(HTML(
   </thead>
   <tbody>
     <tr>
-      <td>lib2</td>
-      <td>23259</td>
-    </tr>
-    <tr>
       <td>lib1</td>
       <td>25896</td>
+    </tr>
+    <tr>
+      <td>lib2</td>
+      <td>23259</td>
     </tr>
   </tbody>
 </table>
@@ -637,31 +1001,31 @@ display(HTML(fates.head().to_html(index=False)))
       <td>AACGAAACCTCTGTCA</td>
       <td>2301</td>
       <td>lib1</td>
-      <td>expt_68-73-none-0-reference</td>
+      <td>expt_68-73-none-0.0-reference</td>
     </tr>
     <tr>
       <td>ATTGGCTTACTAAATA</td>
       <td>2073</td>
       <td>lib1</td>
-      <td>expt_68-73-none-0-reference</td>
+      <td>expt_68-73-none-0.0-reference</td>
     </tr>
     <tr>
       <td>CGATAATATAGACAAG</td>
       <td>2051</td>
       <td>lib1</td>
-      <td>expt_68-73-none-0-reference</td>
+      <td>expt_68-73-none-0.0-reference</td>
     </tr>
     <tr>
       <td>CGCACAAACTAGTAGT</td>
       <td>1855</td>
       <td>lib1</td>
-      <td>expt_68-73-none-0-reference</td>
+      <td>expt_68-73-none-0.0-reference</td>
     </tr>
     <tr>
       <td>AATGGAATATTCACAT</td>
       <td>1825</td>
       <td>lib1</td>
-      <td>expt_68-73-none-0-reference</td>
+      <td>expt_68-73-none-0.0-reference</td>
     </tr>
   </tbody>
 </table>
@@ -685,31 +1049,31 @@ display(HTML(fates.head().to_html(index=False)))
       <td>valid barcode</td>
       <td>6480493</td>
       <td>lib1</td>
-      <td>expt_68-73-none-0-reference</td>
+      <td>expt_68-73-none-0.0-reference</td>
     </tr>
     <tr>
       <td>invalid barcode</td>
       <td>2455034</td>
       <td>lib1</td>
-      <td>expt_68-73-none-0-reference</td>
+      <td>expt_68-73-none-0.0-reference</td>
     </tr>
     <tr>
       <td>low quality barcode</td>
       <td>479114</td>
       <td>lib1</td>
-      <td>expt_68-73-none-0-reference</td>
+      <td>expt_68-73-none-0.0-reference</td>
     </tr>
     <tr>
       <td>failed chastity filter</td>
       <td>213176</td>
       <td>lib1</td>
-      <td>expt_68-73-none-0-reference</td>
+      <td>expt_68-73-none-0.0-reference</td>
     </tr>
     <tr>
       <td>unparseable barcode</td>
       <td>103814</td>
       <td>lib1</td>
-      <td>expt_68-73-none-0-reference</td>
+      <td>expt_68-73-none-0.0-reference</td>
     </tr>
   </tbody>
 </table>
@@ -772,8 +1136,216 @@ display(HTML(fates
   </thead>
   <tbody>
     <tr>
-      <th rowspan="18" valign="top">lib1</th>
-      <th>expt_68-73-none-0-reference</th>
+      <th rowspan="44" valign="top">lib1</th>
+      <th>expt_130-S2K146_0-0.0-escape</th>
+      <td>34505</td>
+      <td>1127841</td>
+      <td>221187</td>
+      <td>54655</td>
+      <td>3828552</td>
+    </tr>
+    <tr>
+      <th>expt_130-S2K146_0-01-0.01-escape</th>
+      <td>39169</td>
+      <td>1278969</td>
+      <td>244135</td>
+      <td>63341</td>
+      <td>4312327</td>
+    </tr>
+    <tr>
+      <th>expt_130-S2K146_0-1-0.1-escape</th>
+      <td>36007</td>
+      <td>1191069</td>
+      <td>226858</td>
+      <td>56722</td>
+      <td>3960766</td>
+    </tr>
+    <tr>
+      <th>expt_130-S2K146_1-1.0-escape</th>
+      <td>13294</td>
+      <td>438790</td>
+      <td>83792</td>
+      <td>22384</td>
+      <td>1467044</td>
+    </tr>
+    <tr>
+      <th>expt_130-S2K146_10-10.0-escape</th>
+      <td>13337</td>
+      <td>407698</td>
+      <td>86466</td>
+      <td>20751</td>
+      <td>1417874</td>
+    </tr>
+    <tr>
+      <th>expt_130-S2K146_100-100.0-escape</th>
+      <td>24346</td>
+      <td>782724</td>
+      <td>152059</td>
+      <td>40517</td>
+      <td>2706553</td>
+    </tr>
+    <tr>
+      <th>expt_130-S2K146_1000-1000.0-escape</th>
+      <td>21917</td>
+      <td>712142</td>
+      <td>139857</td>
+      <td>36458</td>
+      <td>2468573</td>
+    </tr>
+    <tr>
+      <th>expt_130-S2K146_10000-10000.0-escape</th>
+      <td>23318</td>
+      <td>757164</td>
+      <td>148894</td>
+      <td>38423</td>
+      <td>2609751</td>
+    </tr>
+    <tr>
+      <th>expt_130-none-0.0-reference</th>
+      <td>64659</td>
+      <td>2611647</td>
+      <td>427244</td>
+      <td>102060</td>
+      <td>6852605</td>
+    </tr>
+    <tr>
+      <th>expt_133-134-none-0.0-reference</th>
+      <td>302892</td>
+      <td>4325578</td>
+      <td>819740</td>
+      <td>227899</td>
+      <td>11468442</td>
+    </tr>
+    <tr>
+      <th>expt_133-S2K146UCA_0-0.0-escape</th>
+      <td>183558</td>
+      <td>2160736</td>
+      <td>461400</td>
+      <td>139738</td>
+      <td>7160482</td>
+    </tr>
+    <tr>
+      <th>expt_133-S2K146UCA_0-01-0.01-escape</th>
+      <td>154500</td>
+      <td>1866822</td>
+      <td>400970</td>
+      <td>110874</td>
+      <td>6119622</td>
+    </tr>
+    <tr>
+      <th>expt_133-S2K146UCA_0-1-0.1-escape</th>
+      <td>142317</td>
+      <td>1718413</td>
+      <td>369931</td>
+      <td>99995</td>
+      <td>5661222</td>
+    </tr>
+    <tr>
+      <th>expt_133-S2K146UCA_1-1.0-escape</th>
+      <td>141742</td>
+      <td>1710518</td>
+      <td>378102</td>
+      <td>100105</td>
+      <td>5597710</td>
+    </tr>
+    <tr>
+      <th>expt_133-S2K146UCA_10-10.0-escape</th>
+      <td>132037</td>
+      <td>1641782</td>
+      <td>342217</td>
+      <td>95215</td>
+      <td>5258877</td>
+    </tr>
+    <tr>
+      <th>expt_133-S2K146UCA_100-100.0-escape</th>
+      <td>108539</td>
+      <td>1319723</td>
+      <td>276096</td>
+      <td>82646</td>
+      <td>4241705</td>
+    </tr>
+    <tr>
+      <th>expt_133-S2K146UCA_1000-1000.0-escape</th>
+      <td>105893</td>
+      <td>1297220</td>
+      <td>269037</td>
+      <td>84409</td>
+      <td>4228509</td>
+    </tr>
+    <tr>
+      <th>expt_133-S2K146UCA_10000-10000.0-escape</th>
+      <td>102909</td>
+      <td>1260397</td>
+      <td>268069</td>
+      <td>82130</td>
+      <td>4105787</td>
+    </tr>
+    <tr>
+      <th>expt_134-S2E12_0-0.0-escape</th>
+      <td>192536</td>
+      <td>2265538</td>
+      <td>497373</td>
+      <td>137127</td>
+      <td>7545379</td>
+    </tr>
+    <tr>
+      <th>expt_134-S2E12_0-01-0.01-escape</th>
+      <td>165237</td>
+      <td>1973946</td>
+      <td>426489</td>
+      <td>117788</td>
+      <td>6456096</td>
+    </tr>
+    <tr>
+      <th>expt_134-S2E12_0-1-0.1-escape</th>
+      <td>154432</td>
+      <td>1923541</td>
+      <td>409806</td>
+      <td>110557</td>
+      <td>6276780</td>
+    </tr>
+    <tr>
+      <th>expt_134-S2E12_1-1.0-escape</th>
+      <td>139887</td>
+      <td>1750030</td>
+      <td>367992</td>
+      <td>96231</td>
+      <td>5651036</td>
+    </tr>
+    <tr>
+      <th>expt_134-S2E12_10-10.0-escape</th>
+      <td>127884</td>
+      <td>1646556</td>
+      <td>340661</td>
+      <td>93429</td>
+      <td>5306129</td>
+    </tr>
+    <tr>
+      <th>expt_134-S2E12_100-100.0-escape</th>
+      <td>110991</td>
+      <td>1323076</td>
+      <td>277187</td>
+      <td>91037</td>
+      <td>4214102</td>
+    </tr>
+    <tr>
+      <th>expt_134-S2E12_1000-1000.0-escape</th>
+      <td>122084</td>
+      <td>1548582</td>
+      <td>321903</td>
+      <td>86065</td>
+      <td>4915067</td>
+    </tr>
+    <tr>
+      <th>expt_134-S2E12_10000-10000.0-escape</th>
+      <td>129835</td>
+      <td>1647264</td>
+      <td>343190</td>
+      <td>95032</td>
+      <td>5245564</td>
+    </tr>
+    <tr>
+      <th>expt_68-73-none-0.0-reference</th>
       <td>213176</td>
       <td>2455034</td>
       <td>479114</td>
@@ -781,7 +1353,7 @@ display(HTML(fates
       <td>6480493</td>
     </tr>
     <tr>
-      <th>expt_68-S309-421-escape</th>
+      <th>expt_68-S309-421.0-escape</th>
       <td>56713</td>
       <td>520979</td>
       <td>123135</td>
@@ -789,7 +1361,7 @@ display(HTML(fates
       <td>1729027</td>
     </tr>
     <tr>
-      <th>expt_69-S2E12-56-escape</th>
+      <th>expt_69-S2E12-56.0-escape</th>
       <td>138430</td>
       <td>1345786</td>
       <td>314925</td>
@@ -797,7 +1369,7 @@ display(HTML(fates
       <td>4467484</td>
     </tr>
     <tr>
-      <th>expt_70-S2X35-70-escape</th>
+      <th>expt_70-S2X35-70.0-escape</th>
       <td>45302</td>
       <td>433349</td>
       <td>105003</td>
@@ -805,7 +1377,7 @@ display(HTML(fates
       <td>1459938</td>
     </tr>
     <tr>
-      <th>expt_72-S2X58-18-escape</th>
+      <th>expt_72-S2X58-18.0-escape</th>
       <td>131619</td>
       <td>1269771</td>
       <td>304638</td>
@@ -813,7 +1385,7 @@ display(HTML(fates
       <td>4206175</td>
     </tr>
     <tr>
-      <th>expt_73-S304-46-escape</th>
+      <th>expt_73-S304-46.0-escape</th>
       <td>56090</td>
       <td>558183</td>
       <td>130969</td>
@@ -821,7 +1393,7 @@ display(HTML(fates
       <td>1797869</td>
     </tr>
     <tr>
-      <th>expt_74-78-none-0-reference</th>
+      <th>expt_74-78-none-0.0-reference</th>
       <td>279726</td>
       <td>3229902</td>
       <td>640755</td>
@@ -829,7 +1401,7 @@ display(HTML(fates
       <td>8478606</td>
     </tr>
     <tr>
-      <th>expt_74-S2H58-46-escape</th>
+      <th>expt_74-S2H58-46.0-escape</th>
       <td>101327</td>
       <td>946316</td>
       <td>233246</td>
@@ -837,7 +1409,7 @@ display(HTML(fates
       <td>3205580</td>
     </tr>
     <tr>
-      <th>expt_75-S2D106-68-escape</th>
+      <th>expt_75-S2D106-68.0-escape</th>
       <td>96732</td>
       <td>929023</td>
       <td>220951</td>
@@ -845,7 +1417,7 @@ display(HTML(fates
       <td>3166600</td>
     </tr>
     <tr>
-      <th>expt_77-S2X16-54-escape</th>
+      <th>expt_77-S2X16-54.0-escape</th>
       <td>99263</td>
       <td>956574</td>
       <td>233093</td>
@@ -853,7 +1425,7 @@ display(HTML(fates
       <td>3244146</td>
     </tr>
     <tr>
-      <th>expt_78-S2X227-138-escape</th>
+      <th>expt_78-S2X227-138.0-escape</th>
       <td>89899</td>
       <td>868823</td>
       <td>203773</td>
@@ -861,7 +1433,7 @@ display(HTML(fates
       <td>2839240</td>
     </tr>
     <tr>
-      <th>expt_79-81-none-0-reference</th>
+      <th>expt_79-81-none-0.0-reference</th>
       <td>444944</td>
       <td>3239545</td>
       <td>546890</td>
@@ -869,7 +1441,7 @@ display(HTML(fates
       <td>8373676</td>
     </tr>
     <tr>
-      <th>expt_79-S2H97-58-escape</th>
+      <th>expt_79-S2H97-58.0-escape</th>
       <td>12319</td>
       <td>104863</td>
       <td>14768</td>
@@ -877,7 +1449,7 @@ display(HTML(fates
       <td>212145</td>
     </tr>
     <tr>
-      <th>expt_79strin-S2H97_stringent-58-escape</th>
+      <th>expt_79strin-S2H97_stringent-58.0-escape</th>
       <td>1848</td>
       <td>13069</td>
       <td>1197</td>
@@ -885,7 +1457,7 @@ display(HTML(fates
       <td>12221</td>
     </tr>
     <tr>
-      <th>expt_80-S2H13-56-escape</th>
+      <th>expt_80-S2H13-56.0-escape</th>
       <td>152085</td>
       <td>867629</td>
       <td>183161</td>
@@ -893,7 +1465,7 @@ display(HTML(fates
       <td>2917946</td>
     </tr>
     <tr>
-      <th>expt_80strin-S2H13_stringent-56-escape</th>
+      <th>expt_80strin-S2H13_stringent-56.0-escape</th>
       <td>75709</td>
       <td>470358</td>
       <td>91825</td>
@@ -901,7 +1473,7 @@ display(HTML(fates
       <td>1572057</td>
     </tr>
     <tr>
-      <th>expt_81-S2H14-105-escape</th>
+      <th>expt_81-S2H14-105.0-escape</th>
       <td>221026</td>
       <td>1277460</td>
       <td>254846</td>
@@ -909,7 +1481,7 @@ display(HTML(fates
       <td>4377215</td>
     </tr>
     <tr>
-      <th>expt_81strin-S2H14_stringent-105-escape</th>
+      <th>expt_81strin-S2H14_stringent-105.0-escape</th>
       <td>115497</td>
       <td>683625</td>
       <td>136974</td>
